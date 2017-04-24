@@ -7,7 +7,7 @@ class _Strings {
     app: {
       pageTitle: "Pousada Caminho dos Ventos",
       cardTitle: "Pousada Caminho dos Ventos",
-      info: "Estamos em construção. Para ficar atualizado com informções sobre nossa pousada, se inscreva abaixo e iremos te informar por email as novidades!",
+      info: "Estamos em construção. Para ficar atualizado com informações sobre nossa pousada, se inscreva abaixo e iremos te informar por email as novidades!",
       infoSubmitted: "Obrigado! Assim que tivermos novidades iremos te avisar!",
       textFieldEmailLabel: "Seu email...",
       textFieldFirstNameLabel: "Seu nome...",
