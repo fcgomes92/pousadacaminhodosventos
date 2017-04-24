@@ -1,0 +1,50 @@
+body {
+  background-color: #E8F5E9; }
+
+.app,
+.logo {
+  margin: auto;
+  width: 90%; }
+
+@media (min-width: 25em) {
+  .app,
+  .logo {
+    width: 70%; } }
+
+@media (min-width: 48em) {
+  .app,
+  .logo {
+    width: 60%; } }
+
+@media (min-width: 64em) {
+  .app,
+  .logo {
+    width: 50%; } }
+
+.logo {
+  text-align: center; }
+
+.logo svg {
+  max-width: 75%;
+  height: auto; }
+
+.app {
+  text-align: center; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+#bike-back-wheel,
+#bike-front-wheel {
+  stroke-dasharray: 1.5 !important;
+  stroke-width: 0.5 !important;
+  stroke-dashoffset: 0.4 !important;
+  transform-origin: 50% 50%;
+  animation: rotate-wheel 4s linear infinite; }
+
+@keyframes rotate-wheel {
+  100% {
+    transform: rotate(360deg); } }
