@@ -15,6 +15,7 @@ import 'react-mdl/extra/material.js';
 import './index.css';
 import s from './strings';
 import gomeira from './imgs/gomeira.jpg';
+import gomeiraSmall from './imgs/gomeira-small.jpg';
 
 const strings = s.strings.app;
 
@@ -74,6 +75,7 @@ class App extends Component {
   }
 
   render() {
+    let cardBGImage = window.innerWidth > 700 ? gomeira : gomeiraSmall;
     return (
       <div>
         <form action="//fcgomes.us15.list-manage.com/subscribe/post?u=fb12072c078d8ca3077e4ae8f&amp;id=658fc05e91" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
@@ -84,7 +86,7 @@ class App extends Component {
             <CardTitle style={{
               color: '#fff',
               height: '176px',
-              background: `url(${gomeira}) center / cover`
+              background: `url(${cardBGImage}) center / cover`
             }}>{strings.cardTitle}</CardTitle>
             <CardText>
               {this.renderCardText()}
