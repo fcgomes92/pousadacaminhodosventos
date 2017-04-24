@@ -20,6 +20,7 @@
   "bugs": {
     "url": "https://github.com/fcgomes92/pousadacaminhodosventos/issues"
   },
+  "homepage": "https://fcgomes92.github.io/pousadacaminhodosventos",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
