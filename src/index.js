@@ -78,7 +78,7 @@ class App extends Component {
       <div>
         <form action="//fcgomes.us15.list-manage.com/subscribe/post?u=fb12072c078d8ca3077e4ae8f&amp;id=658fc05e91" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
           <Card shadow={2} style={{
-            width: '512px',
+	    width: '100%',
             margin: 'auto'
           }}>
             <CardTitle style={{
