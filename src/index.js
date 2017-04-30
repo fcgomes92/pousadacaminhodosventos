@@ -17,8 +17,6 @@ import {registerServiceWorker} from './serviceWorker';
 
 disableLog();
 
-registerServiceWorker();
-
 const strings = s.strings.app;
 
 // TODO: Move this to another file
@@ -39,9 +37,11 @@ class App extends Component {
             <Route exact={ROUTES.subscribeComponent.exact} path={ROUTES.subscribeComponent.path} component={SubscribeComponent}/>
             <Route exact={ROUTES.aboutComponent.exact} path={ROUTES.aboutComponent.path} component={AboutComponent}/>
             <Route exact={ROUTES.photosComponent.exact} path={ROUTES.photosComponent.path} component={PhotosComponent}/>
-            <Route exact path={'/off'} render={()=>{
-                return (<div>Parece que você esta offline</div>)
-              }}/>
+            <Route exact path={'/off'} render={() => {
+              return (
+                <div>Parece que você esta offline</div>
+              )
+            }}/>
           </div>
           <Footer size="mini" className="footer">
             <FooterSection type="left">
@@ -68,3 +68,7 @@ document.title = strings.pageTitle;
 
 render(
   <App/>, document.getElementById('root'));
+
+try {
+  registerServiceWorker();
+} catch (e) {}
