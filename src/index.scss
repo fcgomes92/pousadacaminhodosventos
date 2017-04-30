@@ -1,47 +1,97 @@
-$green-100: #E8F5E9;
+$green-50: #E8F5E9;
+$light-green-50: #F1F8E9;
+$light-green-100: #DCEDC8;
 $teal-100: #E0F2F1;
 $teal-200: #80CBC4;
 
 body {
-  background-color: $green-100;
+  background-color: $green-50;
+  height: 100%;
+  margin: 0;
 }
 
-.app,
-.logo {
-  margin: auto;
-  width: 90%;
-  @media (min-width: 25em) {
-    width: 70%;
-  }
-  @media (min-width: 48em) {
-    width: 60%;
-  }
-  @media (min-width: 64em) {
-    width: 50%;
-  }
-}
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-.logo {
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%,-50%);
-  text-align: center;
+  .root {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 80%;
+    flex-direction: column;
 
-  svg {
-    max-width: 75%;
-    height: auto;
+    .app {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .content {
+        flex-grow: 1;
+      }
+
+      .footer {
+        margin: 2em 0 0 0;
+        flex-basis: 1em;
+        min-height: 1em;
+        background: linear-gradient($green-50, $light-green-100);
+
+        div {
+          // display: block;
+          ul,
+          ul li {
+            // line-height: normal;
+          }
+        }
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        // align-items: center;
+        // flex-wrap: wrap;
+        //
+        // &.mini {
+        //   .center-left,
+        //   .center-right,
+        //   .left,
+        //   .right {
+        //     flex-basis: 25%;
+        //     align-self: center;
+        //     display: flex;
+        //   }
+        //
+        //   .center-left,
+        //   .center-right {
+        //     justify-content: center;
+        //   }
+        //
+        //   .left {
+        //     justify-content: flex-start;
+        //   }
+        //
+        //   .right {
+        //     justify-content: flex-end;
+        //   }
+        // }
+      }
+    }
   }
-}
 
-.app {
-  text-align: center;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  .logo {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: auto;
+    width: 80%;
+    @media (min-width: 25em) {
+      width: 60%;
+    }
+    @media (min-width: 48em) {
+      width: 50%;
+    }
+    @media (min-width: 64em) {
+      width: 40%;
+    }
+  }
 }
 
 #bike-back-wheel,

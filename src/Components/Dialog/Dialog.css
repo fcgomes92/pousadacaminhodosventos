@@ -1,0 +1,62 @@
+._dialog_wrapper {
+  opacity: 0;
+  position: fixed;
+  transition: all 250ms ease;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: auto; }
+
+._dialog_wrapper.show {
+  z-index: 100;
+  opacity: 1; }
+
+._dialog_wrapper.show ._dialog_bg {
+  opacity: 1;
+  z-index: 101; }
+
+._dialog_wrapper.show ._dialog {
+  transform: translateY(0);
+  z-index: 102; }
+
+._dialog_wrapper ._dialog_bg {
+  position: absolute;
+  background-color: rgba(33, 33, 33, 0.5);
+  transition: all 250ms ease;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+._dialog_wrapper ._dialog {
+  max-width: 95%;
+  max-height: 98%;
+  align-self: center;
+  transition: all 250ms ease-out;
+  background-color: #FFF;
+  transform: translateY(-100%);
+  display: flex;
+  flex-direction: column; }
+
+._dialog_wrapper ._dialog ._dialog_title {
+  padding: 1.5em 1.5em 0.625em 1.5em; }
+
+._dialog_wrapper ._dialog ._dialog_content {
+  padding: 0.625em 1.5em 0 1.5em;
+  overflow: auto;
+  flex-shrink: 1;
+  margin-bottom: 1.5em; }
+
+._dialog_wrapper ._dialog ._dialog_actions {
+  flex-basis: 3.25em;
+  min-height: 3.25em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: flex-end; }

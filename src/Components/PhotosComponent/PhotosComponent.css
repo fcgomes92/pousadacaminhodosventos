@@ -1,0 +1,19 @@
+.photos-component {
+  width: 75%;
+  margin: auto; }
+
+.photos-component .title, .photos-component .subtitle {
+  text-align: center;
+  font-weight: 300; }
+
+.photos-component .photo-list .photo-item {
+  text-align: center;
+  min-width: 8em;
+  min-height: 8em;
+  cursor: pointer;
+  transition: all 250ms ease-in;
+  box-shadow: 0 0 0 #212121; }
+
+.photos-component .photo-list .photo-item:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0.4em 0.8em #212121; }
