@@ -22,7 +22,7 @@ class _Strings {
     aboutComponent: {
       aboutTitle: "Sobre a Pousada Caminho dos Ventos",
       aboutText: `A pousada caminho dos ventos está sendo estruturada para receber os amantes do pedal bem como os demais segmentos da população que gostam de curtir a natureza e as trilhas da maravilhosa Serra da Mantiqueira.
-Localizada no bairro Pinheirinhos na cidade de Passa Quatro apesar de sua estrutura simples, possui uma bela vista do pico da gomeira que faz parte do complexo da Mantiqueira, e fica bem perto das cidades de Virginia, Itanhandú, Itamonte, Pouso Alto, São Sebastião do Rio Verde e vários distritos da região, onde existem um grande potencial do turismo rural.`,
+Localizada no bairro Pinheirinhos na cidade de Passa Quatro apesar de sua estrutura simples, possui uma bela vista do pico da gomeira que faz parte do complexo da Mantiqueira, e fica bem perto das cidades de Virginia, Itanhandú, Itamonte, Pouso Alto, São Sebastião do Rio Verde e vários distritos da região, onde existe um grande potencial do turismo rural.`,
       callText: `A previsão de inauguração é para janeiro de 2018, mas veja nossas fotos, dê sugestões, se inscreva para receber nossas novidades e estaremos em breve esperando por vocês!`,
       returnText: 'Voltar',
       photosText: 'Fotos'
