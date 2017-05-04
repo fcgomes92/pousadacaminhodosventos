@@ -65,7 +65,7 @@ class SubscribeComponent extends Component {
             {this.renderForm()}
           </CardText>
           <CardActions border>
-            <Button type="submit" colored>{strings.subscribe}</Button>
+            <Button type="submit" form="mc-embedded-subscribe-form" colored>{strings.subscribe}</Button>
             <Link to={ROUTES.aboutComponent.path}>
               <Button colored>{strings.readMore}</Button>
             </Link>

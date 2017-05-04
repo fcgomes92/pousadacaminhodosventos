@@ -1,14 +1,20 @@
 // ref:: http://stackoverflow.com/questions/9249680/how-to-check-if-iframe-is-loaded-or-it-has-a-content
 const checkIframeLoaded = (iframeID, callback) => {
-  var iframe = document.getElementById(iframeID);
-  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+  try {
+    var iframe = document.getElementById(iframeID);
+    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-  if (iframeDoc.readyState === 'complete') {
-    callback();
-    return;
-  }
+    console.log(iframe)
+    console.log(iframeDoc)
+    console.log(iframeDoc.readyState)
 
-  window.setTimeout(() => (checkIframeLoaded(iframeID, callback)), 100);
+    if (iframeDoc.readyState === 'complete') {
+      callback();
+      return;
+    }
+  } catch (e) {}
+
+  window.setTimeout(() => (checkIframeLoaded(iframeID, callback)), 250);
 }
 
 const disableLog = () => {

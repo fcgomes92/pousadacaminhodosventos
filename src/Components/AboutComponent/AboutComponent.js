@@ -19,11 +19,12 @@ class AboutComponent extends Component {
   }
 
   componentDidMount() {
-    checkIframeLoaded(AboutComponent.idMapsIFrame, this.handleMapsIFrameLoaded)
+
   }
 
   componentWillMount() {
     window.scrollTo(0, 0);
+    checkIframeLoaded(AboutComponent.idMapsIFrame, this.handleMapsIFrameLoaded);
   }
 
   handleMapsIFrameLoaded = () => {

@@ -21,8 +21,8 @@ class _Strings {
     },
     aboutComponent: {
       aboutTitle: "Sobre a Pousada Caminho dos Ventos",
-      aboutText: `A pousada caminho dos ventos está sendo estruturada para receber os amantes do pedal bem como os demais segmentos da população que gostam de curtir a natureza e as trilhas da maravilhosa Serra da Mantiqueira.
-Localizada no bairro Pinheirinhos na cidade de Passa Quatro apesar de sua estrutura simples, possui uma bela vista do pico da gomeira que faz parte do complexo da Mantiqueira, e fica bem perto das cidades de Virginia, Itanhandú, Itamonte, Pouso Alto, São Sebastião do Rio Verde e vários distritos da região, onde existe um grande potencial do turismo rural.`,
+      aboutText: `A Pousada Caminho dos Ventos está sendo estruturada para receber os amantes do pedal, bem como os demais segmentos da população que gostam de curtir a natureza e as trilhas da maravilhosa Serra da Mantiqueira.
+Localizada no bairro Pinheirinhos, na cidade de Passa Quatro - MG, apesar de sua estrutura simples, possui uma bela vista do Pico da Gomeira, que compõe parte do complexo da Mantiqueira. Fica bem perto das cidades de Virginia, Itanhandú, Itamonte, Pouso Alto, São Sebastião do Rio Verde e vários distritos da região, onde existe a diversidade e capacidade de um ótimo turismo rural.`,
       callText: `A previsão de inauguração é para janeiro de 2018, mas veja nossas fotos, dê sugestões, se inscreva para receber nossas novidades e estaremos em breve esperando por vocês!`,
       returnText: 'Voltar',
       photosText: 'Fotos'
@@ -32,20 +32,20 @@ Localizada no bairro Pinheirinhos na cidade de Passa Quatro apesar de sua estrut
       subtitle: "Clique na foto para ampliar e ver a beleza do nosso espaço!",
       aboutText: "Sobre a Pousada",
       subscribeText: 'Inscreva-se',
-      closeDialog: 'Fechar',
+      closeDialog: 'Fechar'
     },
     contactDialog: {
       dialogTitle: "Contato",
       dialogContent: "Você pode entrar em contato conosco via:",
       contactPhone: '+55 (55) 5 5555 5555',
       contactEmail: 'sergio.gomes@pousadacaminhodosventos.com',
-      closeButton: "Fechar",
+      closeButton: "Fechar"
     },
     aboutDialog: {
       dialogTitle: "",
       dialogContent: "",
       contact: "",
-      closeButton: "Fechar",
+      closeButton: "Fechar"
     }
   };
 
