@@ -1,0 +1,54 @@
+.social-icon {
+  &:before {
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    padding-right: 0.5em;
+    font-size: 1.5em;
+    vertical-align: middle;
+  }
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+
+  li {
+    margin: 0.5em 0;
+
+    &.icon {
+      &-phone {
+        @extend .social-icon;
+        &:before {
+          content: "\f2d2";
+        }
+      }
+
+      &-email {
+        @extend .social-icon;
+
+        &:before {
+          content: "\f423";
+        }
+      }
+    }
+
+    a,
+    a:active,
+    a:visited {
+      color: #00796B;
+      text-decoration: none;
+
+      &:hover {
+        color: #004D40;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.social-icon:before, .contact-list li.icon-site:before, .contact-list li.icon-github:before, .contact-list li.icon-email:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  padding-right: 0.5em;
+  font-size: 1.5em;
+  vertical-align: middle; }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em; }
+  .contact-list li {
+    margin: 0.5em 0; }
+    .contact-list li.icon-site:before {
+      content: "\f276"; }
+    .contact-list li.icon-github:before {
+      content: "\f233"; }
+    .contact-list li.icon-email:before {
+      content: "\f423"; }
+    .contact-list li a,
+    .contact-list li a:active,
+    .contact-list li a:visited {
+      color: #00796B;
+      text-decoration: none; }
+      .contact-list li a:hover,
+      .contact-list li a:active:hover,
+      .contact-list li a:visited:hover {
+        color: #004D40;
+        text-decoration: none; }

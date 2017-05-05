@@ -41,13 +41,21 @@ Localizada no bairro Pinheirinhos, na cidade de Passa Quatro - MG, apesar de sua
       dialogTitle: "Contato",
       dialogContent: "Você pode entrar em contato conosco via:",
       contactPhone: '+55 (55) 5 5555 5555',
+      contactPhoneLink: 'tel:5555555555555',
       contactEmail: 'sergio.gomes@pousadacaminhodosventos.com',
+      contactEmailLink: 'mailto:sergio.gomes@pousadacaminhodosventos.com',
       closeButton: "Fechar"
     },
     aboutDialog: {
-      dialogTitle: "",
-      dialogContent: "",
-      contact: "",
+      dialogTitle: "Sobre o desenvolvedor",
+      dialogContent: `Este site foi desenvolvido por @fcgomes92`,
+      contact: "Para saber mais acesse ou entre em contato por: ",
+      site: 'fcgomes.com',
+      siteURL: 'https://fcgomes.com',
+      github: '@fcgomes92',
+      githubURL: 'https://github.com/fcgomes92',
+      email: 'fcgomes.92@gmail.com',
+      emailURL: 'mailto:fcgomes.92@gmail.com',
       closeButton: "Fechar"
     }
   };

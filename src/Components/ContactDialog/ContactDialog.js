@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button} from 'react-mdl';
 import Dialog, {DialogTitle, DialogContent, DialogActions} from '../Dialog/Dialog';
+import './ContactDialog.css';
 import s from '../../strings';
 
 const strings = s.strings.contactDialog;
@@ -22,8 +23,14 @@ class ContactDialog extends Component {
           <div>
             {strings.dialogContent}
             <hr/>
-            <p>{strings.contactPhone}</p>
-            <p>{strings.contactEmail}</p>
+            <ul className="contact-list">
+              <li className="icon-phone">
+                <a target='_blank' href={strings.contactPhoneLink}>{strings.contactPhone}</a>
+              </li>
+              <li className="icon-email">
+                <a target='_blank' href={strings.contactEmailLink}>{strings.contactEmail}</a>
+              </li>
+            </ul>
           </div>
         </DialogContent>
         <DialogActions>
