@@ -48,7 +48,7 @@ Localizada no bairro Pinheirinhos, na cidade de Passa Quatro - MG, apesar de sua
     },
     aboutDialog: {
       dialogTitle: "Sobre o desenvolvedor",
-      dialogContent: `Este site foi desenvolvido por @fcgomes92`,
+      dialogContent: `Este site foi desenvolvido por Fernando Gomes.`,
       contact: "Para saber mais acesse ou entre em contato por: ",
       site: 'fcgomes.com',
       siteURL: 'https://fcgomes.com',

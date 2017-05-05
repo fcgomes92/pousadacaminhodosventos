@@ -18,7 +18,7 @@ class ContactDialog extends Component {
           this.toggleDialog = dialog.handleToggle;
         }
       }}>
-        <DialogTitle>{strings.dialogTitle}</DialogTitle>
+        <DialogTitle><h4>{strings.dialogTitle}</h4></DialogTitle>
         <DialogContent>
           <div>
             {strings.dialogContent}

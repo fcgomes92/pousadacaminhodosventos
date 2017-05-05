@@ -7,37 +7,45 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%; }
-  .main .root {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 80%;
-    flex-direction: column; }
-    .main .root .app {
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      justify-content: space-between; }
-      .main .root .app .content {
-        flex-grow: 1; }
-      .main .root .app .footer {
-        margin: 2em 0 0 0;
-        flex-basis: 1em;
-        min-height: 1em;
-        background: linear-gradient(#E8F5E9, #DCEDC8); }
+
+.main .root {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 80%;
+  flex-direction: column; }
+
+.main .root .app {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.main .root .app .content {
+  flex-grow: 1; }
+
+.main .root .app .footer {
+  margin: 2em 0 0 0;
+  flex-basis: 1em;
+  min-height: 1em;
+  background: linear-gradient(#E8F5E9, #DCEDC8); }
+
+.main .logo {
+  flex-grow: 1;
+  flex-basis: 20%;
+  margin: auto;
+  width: 80%; }
+
+@media (min-width: 25em) {
   .main .logo {
-    flex-grow: 1;
-    flex-basis: 20%;
-    margin: auto;
-    width: 80%; }
-    @media (min-width: 25em) {
-      .main .logo {
-        width: 60%; } }
-    @media (min-width: 48em) {
-      .main .logo {
-        width: 50%; } }
-    @media (min-width: 64em) {
-      .main .logo {
-        width: 40%; } }
+    width: 60%; } }
+
+@media (min-width: 48em) {
+  .main .logo {
+    width: 50%; } }
+
+@media (min-width: 64em) {
+  .main .logo {
+    width: 40%; } }
 
 #bike-back-wheel,
 #bike-front-wheel {
