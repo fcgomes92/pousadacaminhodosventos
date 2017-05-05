@@ -4,10 +4,6 @@ const checkIframeLoaded = (iframeID, callback) => {
     var iframe = document.getElementById(iframeID);
     var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-    console.log(iframe)
-    console.log(iframeDoc)
-    console.log(iframeDoc.readyState)
-
     if (iframeDoc.readyState === 'complete') {
       callback();
       return;
