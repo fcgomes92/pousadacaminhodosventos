@@ -18,13 +18,17 @@ class DialogTitle extends Component {
 
 class DialogContent extends Component {
   static propTypes = {
+    className: PropTypes.string,
     children: PropTypes.node
   }
 
   render() {
-    const {children} = this.props;
+    const {children, className} = this.props;
+    const clsName = classNames(className, {
+      '_dialog_content': true,
+    })
     return (
-      <div className="_dialog_content">{children}</div>
+      <div className={clsName}>{children}</div>
     )
   }
 }
