@@ -3,88 +3,13 @@ import {Button, Grid, Cell, Spinner} from 'react-mdl';
 import {Link} from 'react-router-dom';
 import {ROUTES} from '../../routes';
 import Dialog, {DialogTitle, DialogContent, DialogActions} from '../Dialog/Dialog';
+import ImageComponent from '../ImageComponent/ImageComponent';
 import s from '../../strings';
+import {DIRECTUS_URL} from '../../settings.js';
+import {directusClient} from '../../util';
 import './PhotosComponent.css';
 
 const strings = s.strings.photosComponent;
-
-const HOST = process.env.PUBLIC_URL;
-
-const mockPhotoList = [
-  {
-    name: "Foto 1",
-    thumbURL: `${HOST}images/thumb-pcv-1.jpeg`,
-    url: `${HOST}images/pcv-1.jpeg`
-  }, {
-    name: "Foto 2",
-    thumbURL: `${HOST}images/thumb-pcv-2.jpeg`,
-    url: `${HOST}images/pcv-2.jpeg`
-  }, {
-    name: "Foto 3",
-    thumbURL: `${HOST}images/thumb-pcv-3.jpeg`,
-    url: `${HOST}images/pcv-3.jpeg`
-  }, {
-    name: "Foto 4",
-    thumbURL: `${HOST}images/thumb-pcv-4.jpeg`,
-    url: `${HOST}images/pcv-4.jpeg`
-  }, {
-    name: "Foto 5",
-    thumbURL: `${HOST}images/thumb-pcv-5.jpeg`,
-    url: `${HOST}images/pcv-5.jpeg`
-  }, {
-    name: "Foto 6",
-    thumbURL: `${HOST}images/thumb-pcv-6.jpeg`,
-    url: `${HOST}images/pcv-6.jpeg`
-  }, {
-    name: "Foto 7",
-    thumbURL: `${HOST}images/thumb-pcv-7.jpeg`,
-    url: `${HOST}images/pcv-7.jpeg`
-  }, {
-    name: "Foto 8",
-    thumbURL: `${HOST}images/thumb-pcv-8.jpeg`,
-    url: `${HOST}images/pcv-8.jpeg`
-  }, {
-    name: "Foto 9",
-    thumbURL: `${HOST}images/thumb-pcv-9.jpeg`,
-    url: `${HOST}images/pcv-9.jpeg`
-  }, {
-    name: "Foto 10",
-    thumbURL: `${HOST}images/thumb-pcv-10.jpeg`,
-    url: `${HOST}images/pcv-10.jpeg`
-  }, {
-    name: "Foto 11",
-    thumbURL: `${HOST}images/thumb-pcv-11.jpeg`,
-    url: `${HOST}images/pcv-11.jpeg`
-  }, {
-    name: "Foto 12",
-    thumbURL: `${HOST}images/thumb-pcv-12.jpeg`,
-    url: `${HOST}images/pcv-12.jpeg`
-  }, {
-    name: "Foto 13",
-    thumbURL: `${HOST}images/thumb-pcv-13.jpeg`,
-    url: `${HOST}images/pcv-13.jpeg`
-  }, {
-    name: "Foto 14",
-    thumbURL: `${HOST}images/thumb-pcv-14.jpeg`,
-    url: `${HOST}images/pcv-14.jpeg`
-  }, {
-    name: "Foto 15",
-    thumbURL: `${HOST}images/thumb-pcv-15.jpeg`,
-    url: `${HOST}images/pcv-15.jpeg`
-  }, {
-    name: "Foto 16",
-    thumbURL: `${HOST}images/thumb-pcv-16.jpeg`,
-    url: `${HOST}images/pcv-16.jpeg`
-  }, {
-    name: "Foto 17",
-    thumbURL: `${HOST}images/thumb-pcv-17.jpeg`,
-    url: `${HOST}images/pcv-17.jpeg`
-  }, {
-    name: "Foto 18",
-    thumbURL: `${HOST}images/thumb-pcv-18.jpeg`,
-    url: `${HOST}images/pcv-18.jpeg`
-  }
-]
 
 class PhotosComponent extends Component {
   constructor(props) {
@@ -96,8 +21,23 @@ class PhotosComponent extends Component {
         url: ""
       },
       loadingPhotos: true,
-      photosList: mockPhotoList
+      photosList: []
     }
+  }
+
+  componentDidMount() {
+    directusClient.getItems('image_gallery', {"filters[active][eq]": 1}).then((response) => {
+      // console.log(response.data);
+      this.setState({
+        photosList: response.data
+      }, () => {
+        setTimeout(() => {
+          this.setState({loadingPhotos: false});
+        }, 250)
+      });
+    }).catch(err => {
+      console.error(err);
+    })
   }
 
   componentWillMount() {
@@ -116,9 +56,13 @@ class PhotosComponent extends Component {
           <h4>{selectedPhoto.name}</h4>
         </DialogTitle>
         <DialogContent>
-          <img style={{
-            maxWidth: '100%'
-          }} src={selectedPhoto.url} alt={selectedPhoto.name}/>
+          <ImageComponent loadingElement={<div className="dialog-spinner"><Spinner className="spinner"/></div>}
+            imageProps={{
+            style: {
+              maxWidth: '100%'
+            },
+            alt: selectedPhoto.name
+          }} src={selectedPhoto.url}/>
         </DialogContent>
         <DialogActions>
           <Button onClick={this.handleClosePhotoDialog} colored>{strings.closeDialog}</Button>
@@ -129,8 +73,13 @@ class PhotosComponent extends Component {
 
   handleOpenPhotoDialog = (photoIndex) => {
     const {photosList} = this.state;
+    let photo = photosList[photoIndex];
     this.setState({
-      selectedPhoto: photosList[photoIndex],
+      selectedPhoto: {
+        name: photo.title,
+        thumbURL: `${DIRECTUS_URL}${photo.image.data.thumbnail_url}`,
+        url: `${DIRECTUS_URL}${photo.image.data.url}`
+      }
     }, () => {
       this.togglePhotoDialog();
     });
@@ -148,19 +97,28 @@ class PhotosComponent extends Component {
   }
 
   renderLoadingPhotos = () => {
-    return (<Spinner/>)
+    return (
+      <div style={{
+        textAlign: 'center'
+      }}><Spinner/></div>
+    )
   }
 
   renderImageGalery = () => {
-    const {photosList} = this.state;
+    const {photosList, loadingPhotos} = this.state;
+    if (loadingPhotos) {
+      return this.renderLoadingPhotos();
+    }
     return (
       <Grid noSpacing className="photo-list">
         {photosList.map((photo, index) => (
           <Cell col={2} className='photo-item' onClick={() => {
             this.handleOpenPhotoDialog(index)
-          }} style={{
-            background: `url(${photo.thumbURL}) center / cover`
-          }} key={`photo-${index}`}></Cell>
+          }} key={`photo-${index}`}>
+            <ImageComponent wrapperProps={{
+              className: 'photo-item-wrapper'
+            }} src={`${DIRECTUS_URL}${photo.image.data.thumbnail_url}`} loadingElement={<div className="loading-element"><Spinner className="spinner"/></div>}/>
+          </Cell>
         ))}
       </Grid>
     )

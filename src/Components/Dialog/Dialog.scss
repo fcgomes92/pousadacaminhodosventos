@@ -54,10 +54,13 @@
     }
 
     ._dialog_content {
+      position: relative;
       padding: 0.625em 1.5em 0 1.5em;
       overflow: auto;
       flex-shrink: 1;
       margin-bottom: 1.5em;
+      min-height: 5em;
+      min-width: 5em;
     }
 
     ._dialog_actions {

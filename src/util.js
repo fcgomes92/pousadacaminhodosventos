@@ -20,3 +20,7 @@ const disableLog = () => {
 }
 
 export {checkIframeLoaded, disableLog}
+
+import RemoteInstance from 'directus-sdk-javascript/remote';
+import {DIRECTUS_URL} from './settings.js';
+export const directusClient = new RemoteInstance({url: `${DIRECTUS_URL}/api/1.1/`, accessToken: "AM9Omvb1egkzDCajMpE9CINnhAO3xMS4"});
