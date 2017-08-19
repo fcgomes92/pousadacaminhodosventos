@@ -40,8 +40,8 @@ Localizada no bairro Pinheirinhos, na cidade de Passa Quatro - MG, apesar de sua
     contactDialog: {
       dialogTitle: "Contato",
       dialogContent: "Você pode entrar em contato conosco via:",
-      contactPhone: '+55 (55) 5 5555 5555',
-      contactPhoneLink: 'tel:5555555555555',
+      contactPhone: '+55 (35) 9700-9631​⁠​',
+      contactPhoneLink: 'tel:553597009631​⁠​',
       contactEmail: 'sergio.gomes@pousadacaminhodosventos.com',
       contactEmailLink: 'mailto:sergio.gomes@pousadacaminhodosventos.com',
       closeButton: "Fechar"

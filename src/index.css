@@ -38,16 +38,3 @@ body {
     @media (min-width: 64em) {
       .main .logo {
         width: 40%; } }
-
-#bike-back-wheel,
-#bike-front-wheel {
-  stroke-dasharray: 1.5 !important;
-  stroke-width: 0.5 !important;
-  stroke-dashoffset: 0.4 !important;
-  transform-origin: 50% 50%;
-  transition: all 250ms ease;
-  animation: rotate-wheel 4s linear infinite; }
-
-@keyframes rotate-wheel {
-  100% {
-    transform: rotate(360deg); } }

@@ -13,7 +13,6 @@ import AboutDialog from './Components/AboutDialog/AboutDialog';
 import ContactDialog from './Components/ContactDialog/ContactDialog';
 import PhotosComponent from './Components/PhotosComponent/PhotosComponent';
 import {disableLog} from './util';
-import {registerServiceWorker} from './serviceWorker';
 
 disableLog();
 
@@ -68,7 +67,3 @@ document.title = strings.pageTitle;
 
 render(
   <App/>, document.getElementById('root'));
-
-try {
-  registerServiceWorker();
-} catch (e) {}

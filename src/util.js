@@ -1,3 +1,5 @@
+import RemoteInstance from './vendor/directus';
+import {DIRECTUS_URL} from './settings';
 // ref:: http://stackoverflow.com/questions/9249680/how-to-check-if-iframe-is-loaded-or-it-has-a-content
 const checkIframeLoaded = (iframeID, callback) => {
   try {
@@ -20,7 +22,4 @@ const disableLog = () => {
 }
 
 export {checkIframeLoaded, disableLog}
-
-import RemoteInstance from 'directus-sdk-javascript/remote';
-import {DIRECTUS_URL} from './settings.js';
 export const directusClient = new RemoteInstance({url: `${DIRECTUS_URL}/api/1.1/`, accessToken: "AM9Omvb1egkzDCajMpE9CINnhAO3xMS4"});
