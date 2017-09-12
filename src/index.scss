@@ -8,6 +8,7 @@ body {
   background-color: $green-50;
   height: 100%;
   margin: 0;
+  font-size: 10px;
 }
 
 .main {
@@ -36,70 +37,31 @@ body {
         flex-basis: 1em;
         min-height: 1em;
         background: linear-gradient($green-50, $light-green-100);
-
-        div {
-          // display: block;
-          ul,
-          ul li {
-            // line-height: normal;
-          }
-        }
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-between;
-        // align-items: center;
-        // flex-wrap: wrap;
-        //
-        // &.mini {
-        //   .center-left,
-        //   .center-right,
-        //   .left,
-        //   .right {
-        //     flex-basis: 25%;
-        //     align-self: center;
-        //     display: flex;
-        //   }
-        //
-        //   .center-left,
-        //   .center-right {
-        //     justify-content: center;
-        //   }
-        //
-        //   .left {
-        //     justify-content: flex-start;
-        //   }
-        //
-        //   .right {
-        //     justify-content: flex-end;
-        //   }
-        // }
       }
     }
   }
 
   .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-grow: 1;
     flex-basis: 20%;
-    margin: auto;
-    width: 80%;
+    width: 95%;
+    margin: 1em auto;
     @media (min-width: 25em) {
-      width: 60%;
+      width: 80%;
     }
-    @media (min-width: 48em) {
-      width: 50%;
-    }
-    @media (min-width: 64em) {
-      width: 40%;
+    svg {
+      flex-grow: 1;
+      height: auto;
+      max-width: 60em;
     }
   }
 }
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg, 0, 0);
+    transform: rotate(360deg);
   }
-}
-
-.logo-wheel {
-  // animation: spin 2s linear infinite;
 }
