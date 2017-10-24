@@ -1,17 +1,7 @@
 import React, {Component} from 'react';
-import {
-  Card,
-  CardTitle,
-  CardText,
-  CardActions,
-  Button,
-  Textfield,
-  Grid,
-  Cell,
-  Spinner
-} from 'react-mdl';
 import {Link} from 'react-router-dom';
 import './SubscribeComponent.css';
+import Loader from '../Loader/LoaderComponent';
 import {ROUTES} from '../../routes';
 import s from '../../strings';
 import gomeira from '../../imgs/gomeira.jpg';
@@ -51,59 +41,39 @@ class SubscribeComponent extends Component {
 
   renderForm = () => {
     const {submittedForm, submittingForm} = this.state;
-    const styles = {
-      spinnerWrapper: {
-        transition: 'opacity 250ms ease',
-        margin: '0',
-        width: submittingForm
-          ? '100%'
-          : '0'
-      },
-      spinner: {
-        transition: 'opacity 250ms ease',
-        opacity: submittingForm
-          ? '1'
-          : '0'
-      }
-    }
     if (submittedForm)
       return (
-        <div>
-        <Grid>
-          <Cell col={12}>
-            <p>{strings.formSubmitted}</p>
-          </Cell>
-          <Cell col={12}>
-            <Button colored onClick={this.handleReSubmitForm}>{strings.subscribeOtherEmail}</Button>
-          </Cell>
-        </Grid>
-      </div>
+        <div className="main-card-submitted">
+          <p>{strings.formSubmitted}</p>
+          <div>
+            <button onClick={this.handleReSubmitForm}>{strings.subscribeOtherEmail}</button>
+          </div>
+        </div>
       )
-    else
+    else {
       return (
         <form disabled={submittingForm} action="//fcgomes.us15.list-manage.com/subscribe/post?u=fb12072c078d8ca3077e4ae8f&amp;id=658fc05e91" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" onSubmit={this.handleSubscribeFormSubmit}>
-          <Grid>
-            <Cell col={12}>
+          <div>
+            <div className="main-card-info">
               {strings.info}
-            </Cell>
-            <Cell col={12}>
-              <div>
-                <Textfield disabled={submittingForm} floatingLabel label={strings.textFieldEmailLabel} required onChange={() => {}} type="email" name="EMAIL"/>
+            </div>
+            <div className="main-card-inputs">
+              <div className="main-card-input">
+                <input disabled={submittingForm} placeholder={strings.textFieldEmailLabel} required onChange={() => {}} type="email" name="EMAIL"/>
               </div>
-              <div>
-                <Textfield disabled={submittingForm} floatingLabel label={strings.textFieldFirstNameLabel} onChange={() => {}} type="text" name="FNAME"/>
+              <div className="main-card-input">
+                <input disabled={submittingForm} placeholder={strings.textFieldFirstNameLabel} onChange={() => {}} type="text" name="FNAME"/>
               </div>
-              <div>
-                <Textfield disabled={submittingForm} floatingLabel label={strings.textFieldLastNameLabel} onChange={() => {}} type="text" name="LNAME"/>
+              <div className="main-card-input">
+                <input disabled={submittingForm} placeholder={strings.textFieldLastNameLabel} onChange={() => {}} type="text" name="LNAME"/>
               </div>
-              <Button type="submit" form="mc-embedded-subscribe-form" colored>{strings.subscribe}</Button>
-            </Cell>
-            <Cell col={12} style={styles.spinnerWrapper}>
-              <Spinner style={styles.spinner}/>
-            </Cell>
-          </Grid>
+              <button type="submit" form="mc-embedded-subscribe-form">{strings.subscribe}</button>
+            </div>
+            <Loader show={submittingForm} size="5em"/>
+          </div>
         </form>
       )
+    }
   };
 
   render() {
@@ -112,27 +82,29 @@ class SubscribeComponent extends Component {
       : gomeiraSmall;
     return (
       <div>
-        <Card className="main-card" shadow={2} style={{
+        <div className="main-card" style={{
           width: '100%',
           margin: 'auto'
         }}>
-          <CardTitle style={{
-            color: '#fff',
-            height: '176px',
+          <div className="main-card-header-image" style={{
             background: `url(${cardBGImage}) center / cover`
-          }}>{strings.cardTitle}</CardTitle>
-        <CardText style={{margin: 'auto'}}>
+          }}>
+            <span>{strings.cardTitle}</span>
+          </div>
+          <div className="main-card-content" style={{
+            margin: 'auto'
+          }}>
             {this.renderForm()}
-          </CardText>
-          <CardActions border>
+          </div>
+          <div className="main-card-actions">
             <Link to={ROUTES.aboutComponent.path}>
-              <Button colored>{strings.readMore}</Button>
+              <button>{strings.readMore}</button>
             </Link>
             <Link to={ROUTES.photosComponent.path}>
-              <Button colored>{strings.photosText}</Button>
+              <button>{strings.photosText}</button>
             </Link>
-          </CardActions>
-        </Card>
+          </div>
+        </div>
       </div>
     )
   }

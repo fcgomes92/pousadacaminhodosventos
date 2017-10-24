@@ -48,7 +48,7 @@ class ImageComponent extends Component {
     return (
       <div {...this.props.wrapperProps}>
         {this.renderSpinner()}
-        <img {...this.props.imageProps} src={this.props.src} onLoad={this.handleImageLoaded} onError={this.handleImageErrored}/>
+        <img {...this.props.imageProps} src={this.props.src} onLoad={this.handleImageLoaded} onError={this.handleImageErrored} alt=""/>
       </div>
     )
   }

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Button} from 'react-mdl';
 import Dialog, {DialogTitle, DialogContent, DialogActions} from '../Dialog/Dialog';
 import './About.css';
 import s from '../../strings';
@@ -18,24 +17,28 @@ class AboutDialog extends Component {
           this.toggleDialog = dialog.handleToggle;
         }
       }}>
-        <DialogTitle><h4>{strings.dialogTitle}</h4></DialogTitle>
+        <DialogTitle>
+          <h4>{strings.dialogTitle}</h4>
+        </DialogTitle>
         <DialogContent>
-          {strings.dialogContent}
-          <hr/> {strings.contact}
-          <ul className="contact-list">
-            <li className="icon-site">
-              <a target='_blank' href={strings.siteURL}>{strings.site}</a>
-            </li>
-            <li className="icon-github">
-              <a target='_blank' href={strings.githubURL}>{strings.github}</a>
-            </li>
-            <li className="icon-email">
-              <a target='_blank' href={strings.emailURL}>{strings.email}</a>
-            </li>
-          </ul>
+          <div>
+            {strings.dialogContent}
+            <hr/> {strings.contact}
+            <ul className="contact-list">
+              <li className="icon-site">
+                <a target='_blank' href={strings.siteURL}>{strings.site}</a>
+              </li>
+              <li className="icon-github">
+                <a target='_blank' href={strings.githubURL}>{strings.github}</a>
+              </li>
+              <li className="icon-email">
+                <a target='_blank' href={strings.emailURL}>{strings.email}</a>
+              </li>
+            </ul>
+          </div>
         </DialogContent>
         <DialogActions>
-          <Button colored onClick={this.handleToggle}>{strings.closeButton}</Button>
+          <button onClick={this.handleToggle}>{strings.closeButton}</button>
         </DialogActions>
       </Dialog>
     );

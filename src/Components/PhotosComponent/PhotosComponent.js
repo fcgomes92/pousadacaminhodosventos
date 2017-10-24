@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Button, Grid, Cell, Spinner} from 'react-mdl';
 import {Link} from 'react-router-dom';
 import {ROUTES} from '../../routes';
 import Dialog, {DialogTitle, DialogContent, DialogActions} from '../Dialog/Dialog';
+import Loader from '../Loader/LoaderComponent';
 import ImageComponent from '../ImageComponent/ImageComponent';
 import s from '../../strings';
 import {DIRECTUS_URL} from '../../settings.js';
@@ -56,16 +56,18 @@ class PhotosComponent extends Component {
           <h4>{selectedPhoto.name}</h4>
         </DialogTitle>
         <DialogContent>
-          <ImageComponent loadingElement={<div className="dialog-spinner"><Spinner className="spinner"/></div>}
+          <ImageComponent loadingElement={<div className="dialog-spinner"><Loader className="spinner" size="2em"/></div>}
             imageProps={{
             style: {
-              maxWidth: '100%'
+              maxHeight: '80vh',
+              maxWidth: '100%',
+              margin: 'auto',
             },
             alt: selectedPhoto.name
           }} src={selectedPhoto.url}/>
         </DialogContent>
         <DialogActions>
-          <Button onClick={this.handleClosePhotoDialog} colored>{strings.closeDialog}</Button>
+          <button onClick={this.handleClosePhotoDialog}>{strings.closeDialog}</button>
         </DialogActions>
       </Dialog>
     )
@@ -98,9 +100,7 @@ class PhotosComponent extends Component {
 
   renderLoadingPhotos = () => {
     return (
-      <div style={{
-        textAlign: 'center'
-      }}><Spinner/></div>
+      <Loader className="loading-element" size="2em"/>
     )
   }
 
@@ -110,17 +110,17 @@ class PhotosComponent extends Component {
       return this.renderLoadingPhotos();
     }
     return (
-      <Grid noSpacing className="photo-list">
+      <div className="photo-list">
         {photosList.map((photo, index) => (
-          <Cell col={2} className='photo-item' onClick={() => {
+          <div className='photo-item' onClick={() => {
             this.handleOpenPhotoDialog(index)
           }} key={`photo-${index}`}>
             <ImageComponent wrapperProps={{
               className: 'photo-item-wrapper'
-            }} src={`${DIRECTUS_URL}${photo.image.data.thumbnail_url}`} loadingElement={<div className="loading-element"><Spinner className="spinner"/></div>}/>
-          </Cell>
+            }} src={`${DIRECTUS_URL}${photo.image.data.thumbnail_url}`} loadingElement={<Loader className="loading-element" size="2em"/>}/>
+        </div>
         ))}
-      </Grid>
+      </div>
     )
   }
 
@@ -139,10 +139,10 @@ class PhotosComponent extends Component {
         {this.renderImageGalery()}
         <div style={styles.actions}>
           <Link to={ROUTES.subscribeComponent.path}>
-            <Button colored>{strings.subscribeText}</Button>
+            <button>{strings.subscribeText}</button>
           </Link>
           <Link to={ROUTES.aboutComponent.path}>
-            <Button colored>{strings.aboutText}</Button>
+            <button>{strings.aboutText}</button>
           </Link>
         </div>
       </div>

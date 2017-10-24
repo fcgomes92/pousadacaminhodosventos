@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Spinner} from 'react-mdl';
+import Loader from '../Loader/LoaderComponent';
 import {Link} from 'react-router-dom';
 import './AboutComponent.css';
 import {ROUTES} from '../../routes';
@@ -18,9 +18,7 @@ class AboutComponent extends Component {
     }
   }
 
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   componentWillMount() {
     window.scrollTo(0, 0);
@@ -33,7 +31,7 @@ class AboutComponent extends Component {
 
   renderMapsIFrame = () => {
     if (!this.state.mapsIFrameLoaded)
-      return <Spinner singleColor/>
+      return <Loader size="5em"/>
   }
 
   render() {
@@ -54,8 +52,7 @@ class AboutComponent extends Component {
           </p>
 
           <div className="map">
-            {this.renderMapsIFrame()}
-            <iframe id={AboutComponent.idMapsIFrame} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236075.4523113462!2d-45.09561493674635!3d-22.403457709491104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9dff002e82d8ab%3A0x428c149595ba0f95!2sPassa+Quatro+-+State+of+Minas+Gerais!5e0!3m2!1sen!2sbr!4v1493347536178" height="100%" frameBorder="0" allowFullScreen></iframe>
+            <iframe title={AboutComponent.idMapsIFrame} id={AboutComponent.idMapsIFrame} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236075.4523113462!2d-45.09561493674635!3d-22.403457709491104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9dff002e82d8ab%3A0x428c149595ba0f95!2sPassa+Quatro+-+State+of+Minas+Gerais!5e0!3m2!1sen!2sbr!4v1493347536178" height="100%" frameBorder="0" allowFullScreen></iframe>
           </div>
 
           <p className="call-text">
@@ -64,11 +61,12 @@ class AboutComponent extends Component {
 
           <div style={styles.actions}>
             <Link to={ROUTES.subscribeComponent.path}>
-              <Button colored>{strings.returnText}</Button>
+              <button>{strings.returnText}</button>
             </Link>
             <Link to={ROUTES.photosComponent.path}>
-              <Button colored>{strings.photosText}</Button>
+              <button>{strings.photosText}</button>
             </Link>
+            <button onClick={this.props.contactCallback}>{strings.contactButton}</button>
           </div>
         </div>
       </div>

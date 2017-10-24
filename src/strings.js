@@ -24,10 +24,11 @@ class _Strings {
     },
     aboutComponent: {
       aboutTitle: "Sobre a Pousada Caminho dos Ventos",
-      aboutText: `A Pousada Caminho dos Ventos está sendo estruturada para receber os amantes do pedal, bem como os demais segmentos da população que gostam de curtir a natureza e as trilhas da maravilhosa Serra da Mantiqueira.
+      aboutText: `A Pousada e Hostel Caminho dos Ventos está sendo estruturada para receber os amantes do pedal, bem como os demais segmentos da população que gostam de curtir a natureza e as trilhas da maravilhosa Serra da Mantiqueira.
 Localizada no bairro Pinheirinhos, na cidade de Passa Quatro - MG, apesar de sua estrutura simples, possui uma bela vista do Pico da Gomeira, que compõe parte do complexo da Mantiqueira. Fica bem perto das cidades de Virginia, Itanhandú, Itamonte, Pouso Alto, São Sebastião do Rio Verde e vários distritos da região, onde existe a diversidade e capacidade de um ótimo turismo rural.`,
       callText: `A previsão de inauguração é para janeiro de 2018, mas veja nossas fotos, dê sugestões, se inscreva para receber nossas novidades e estaremos em breve esperando por vocês!`,
       returnText: 'Inscreva-se',
+      contactButton: "Entre em contato",
       photosText: 'Fotos'
     },
     photosComponent: {
@@ -44,6 +45,9 @@ Localizada no bairro Pinheirinhos, na cidade de Passa Quatro - MG, apesar de sua
       contactPhoneLink: 'tel:5535997009631​⁠​',
       contactEmail: 'sergiomarcusrgomes@hotmail.com',
       contactEmailLink: 'mailto:sergiomarcusrgomes@hotmail.com',
+      contactAddressPt1: "Rua Clementino José de Siqueira, 2029, Pinheirinhos",
+      contactAddressPt2: "Passa Quatro / MG",
+      contactAddressLink: "https://goo.gl/maps/WqnJ8Uxacxw",
       closeButton: "Fechar"
     },
     aboutDialog: {

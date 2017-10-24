@@ -4,9 +4,109 @@ $teal-200: #80CBC4;
 
 body {
   background-color: $green-100;
+  font-family: Roboto, sans-serif;
+  margin-bottom: 10em;
 }
 
 .main-card {
-  max-width: 40em;
+  width: 100%;
+  max-width: 60em;
   text-align: center;
+  background-color: #FFF;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 400;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  border-radius: 2px;
+
+  .main-card-header-image {
+    position: relative;
+    border-radius: 2px 2px 0 0;
+    color: #fff;
+    min-height: 14em;
+
+    span {
+      font-weight: 300;
+      position: absolute;
+      font-size: 2.4em;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: left;
+      padding: 0.5em;
+      background: linear-gradient(transparent,rgba(#333,.5));
+    }
+  }
+
+  .main-card-content {
+    color: rgba(0,0,0,.54);
+    line-height: 160%;
+    overflow: hidden;
+    padding: 1.6em;
+    width: 90%;
+
+    .main-card-submitted {
+      p {
+        font-size: 1.6em;
+      }
+    }
+
+    form {
+      .main-card-info {
+        font-size: 1.6em;
+        margin: 0.5em 0;
+      }
+
+      .main-card-inputs {
+        margin: 1.6em 0;
+
+        .main-card-input {
+          margin: 1.6em;
+          input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #CCC;
+            color: #555;
+            box-sizing: border-box;
+            font-size: 1.6em;
+            padding: 1em 0;
+            position: relative;
+            top: 50%;
+            width: 90%;
+
+            @media(min-width: 40em){
+              width: 50%;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          input::-webkit-input-placeholder {
+            color: #AAA;
+          }
+
+          input:focus::-webkit-input-placeholder {
+            color: #4caf50;
+          }
+        }
+      }
+    }
+  }
+
+  .main-card-actions {
+    line-height: normal;
+    width: 100%;
+    background-color: transparent;
+    padding: .8em;
+    margin: .8em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0,0,0,.1);
+  }
 }

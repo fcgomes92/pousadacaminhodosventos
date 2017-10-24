@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Button} from 'react-mdl';
 import Dialog, {DialogTitle, DialogContent, DialogActions} from '../Dialog/Dialog';
 import './ContactDialog.css';
 import s from '../../strings';
@@ -30,11 +29,14 @@ class ContactDialog extends Component {
               <li className="icon-email">
                 <a target='_blank' href={strings.contactEmailLink}>{strings.contactEmail}</a>
               </li>
+              <li className="icon-map">
+                <a target='_blank' href={strings.contactAddressLink}>{strings.contactAddressPt1}<br/>{strings.contactAddressPt2}</a>
+              </li>
             </ul>
           </div>
         </DialogContent>
         <DialogActions>
-          <Button colored onClick={this.handleToggle}>{strings.closeButton}</Button>
+          <button onClick={this.handleToggle}>{strings.closeButton}</button>
         </DialogActions>
       </Dialog>
     );

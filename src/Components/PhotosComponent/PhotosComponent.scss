@@ -6,9 +6,14 @@
   .title {
     text-align: center;
     font-weight: 300;
+    font-size: 1.6em;
   }
 
   .photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     .photo-item {
       text-align: center;
       min-width: 8em;
@@ -16,9 +21,11 @@
       cursor: pointer;
       transition: all 250ms ease-in;
       box-shadow: 0 0 0 #212121;
+      margin: .35em;
+      border-radius: .1em;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.5);
         box-shadow: 0 0.4em 0.8em #212121;
         z-index: 2;
       }
@@ -61,10 +68,8 @@
 
 .dialog-spinner {
   @extend .spinner-wrapper;
-  position: absolute;
-  top: 0.625em;
-  right: 1.5em;
-  bottom: 0;
-  left: 1.5em;
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
   background-color: rgba(33,33,33,.8);
 }

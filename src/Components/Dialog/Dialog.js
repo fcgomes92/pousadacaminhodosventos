@@ -131,7 +131,7 @@ class Dialog extends Component {
     return (
       <div style={_style} className={clsWrapper}>
         <div style={_styleDialogBG} className={clsDialogBG} onClick={() => {
-          if (modal)
+          if (modal && this.state.open)
             this.handleToggle()
         }}></div>
         <div style={_styleDialog} className={clsDialog}>

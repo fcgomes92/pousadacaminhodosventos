@@ -39,6 +39,14 @@
           content: "\f423";
         }
       }
+
+      &-map {
+        @extend .social-icon;
+
+        &:before {
+          content: "\f203";
+        }
+      }
     }
 
     a,

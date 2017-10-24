@@ -22,6 +22,7 @@ body {
   justify-content: space-between; }
 
 .main .root .app .content {
+  position: relative;
   flex-grow: 1; }
 
 .main .root .app .footer {
@@ -51,3 +52,25 @@ body {
 @keyframes spin {
   100% {
     transform: rotate(360deg); } }
+
+button {
+  height: 100%;
+  line-height: 160%;
+  font-size: 1.4em;
+  margin: .8em;
+  text-transform: uppercase;
+  padding: 0 1.6em;
+  border-radius: .2em;
+  background: none;
+  border: none;
+  min-width: 6.4em;
+  text-align: center;
+  font-family: Roboto;
+  color: #4caf50;
+  cursor: pointer; }
+
+button:hover {
+  background: rgba(204, 204, 204, 0.5); }
+
+button span {
+  font-size: 1.4em; }
