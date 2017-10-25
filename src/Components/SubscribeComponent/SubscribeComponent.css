@@ -17,75 +17,62 @@ body {
   z-index: 1;
   position: relative;
   border-radius: 2px; }
-
-.main-card .main-card-header-image {
-  position: relative;
-  border-radius: 2px 2px 0 0;
-  color: #fff;
-  min-height: 14em; }
-
-.main-card .main-card-header-image span {
-  font-weight: 300;
-  position: absolute;
-  font-size: 2.4em;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: left;
-  padding: 0.5em;
-  background: linear-gradient(transparent, rgba(51, 51, 51, 0.5)); }
-
-.main-card .main-card-content {
-  color: rgba(0, 0, 0, 0.54);
-  line-height: 160%;
-  overflow: hidden;
-  padding: 1.6em;
-  width: 90%; }
-
-.main-card .main-card-content .main-card-submitted p {
-  font-size: 1.6em; }
-
-.main-card .main-card-content form .main-card-info {
-  font-size: 1.6em;
-  margin: 0.5em 0; }
-
-.main-card .main-card-content form .main-card-inputs {
-  margin: 1.6em 0; }
-
-.main-card .main-card-content form .main-card-inputs .main-card-input {
-  margin: 1.6em; }
-
-.main-card .main-card-content form .main-card-inputs .main-card-input input {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #CCC;
-  color: #555;
-  box-sizing: border-box;
-  font-size: 1.6em;
-  padding: 1em 0;
-  position: relative;
-  top: 50%;
-  width: 90%; }
-
-@media (min-width: 40em) {
-  .main-card .main-card-content form .main-card-inputs .main-card-input input {
-    width: 50%; } }
-
-.main-card .main-card-content form .main-card-inputs .main-card-input input:focus {
-  outline: none; }
-
-.main-card .main-card-content form .main-card-inputs .main-card-input input::-webkit-input-placeholder {
-  color: #AAA; }
-
-.main-card .main-card-content form .main-card-inputs .main-card-input input:focus::-webkit-input-placeholder {
-  color: #4caf50; }
-
-.main-card .main-card-actions {
-  line-height: normal;
-  width: 100%;
-  background-color: transparent;
-  padding: .8em;
-  margin: .8em;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .main-card .main-card-header-image {
+    position: relative;
+    border-radius: 2px 2px 0 0;
+    color: #fff;
+    min-height: 14em; }
+    .main-card .main-card-header-image span {
+      font-weight: 300;
+      position: absolute;
+      font-size: 2.4em;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: left;
+      padding: 0.5em;
+      background: linear-gradient(transparent, rgba(51, 51, 51, 0.5)); }
+  .main-card .main-card-content {
+    color: rgba(0, 0, 0, 0.54);
+    line-height: 160%;
+    overflow: hidden;
+    padding: 1.6em;
+    width: 90%; }
+    .main-card .main-card-content .main-card-submitted p {
+      font-size: 1.6em; }
+    .main-card .main-card-content form .main-card-info {
+      font-size: 1.6em;
+      margin: 0.5em 0; }
+    .main-card .main-card-content form .main-card-inputs {
+      margin: 1.6em 0; }
+      .main-card .main-card-content form .main-card-inputs .main-card-input {
+        margin: 1.6em; }
+        .main-card .main-card-content form .main-card-inputs .main-card-input input {
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #CCC;
+          color: #555;
+          box-sizing: border-box;
+          font-size: 1.6em;
+          padding: 1em 0;
+          position: relative;
+          top: 50%;
+          width: 90%; }
+          @media (min-width: 40em) {
+            .main-card .main-card-content form .main-card-inputs .main-card-input input {
+              width: 50%; } }
+          .main-card .main-card-content form .main-card-inputs .main-card-input input:focus {
+            outline: none; }
+        .main-card .main-card-content form .main-card-inputs .main-card-input input::-webkit-input-placeholder {
+          color: #AAA; }
+        .main-card .main-card-content form .main-card-inputs .main-card-input input:focus::-webkit-input-placeholder {
+          color: #4caf50; }
+  .main-card .main-card-actions {
+    line-height: normal;
+    width: 100%;
+    background-color: transparent;
+    padding: .8em;
+    margin: .8em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }

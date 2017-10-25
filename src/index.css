@@ -8,46 +8,39 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%; }
-
-.main .root {
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 80%;
-  flex-direction: column; }
-
-.main .root .app {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: space-between; }
-
-.main .root .app .content {
-  position: relative;
-  flex-grow: 1; }
-
-.main .root .app .footer {
-  margin: 2em 0 0;
-  flex-basis: 1em;
-  min-height: 1em;
-  background: linear-gradient(#E8F5E9, #DCEDC8); }
-
-.main .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  flex-basis: 20%;
-  width: 95%;
-  margin: 1em auto; }
-
-@media (min-width: 25em) {
+  .main .root {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 80%;
+    flex-direction: column; }
+    .main .root .app {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: space-between; }
+      .main .root .app .content {
+        position: relative;
+        flex-grow: 1; }
+      .main .root .app .footer {
+        margin: 2em 0 0;
+        flex-basis: 1em;
+        min-height: 1em;
+        background: linear-gradient(#E8F5E9, #DCEDC8); }
   .main .logo {
-    width: 80%; } }
-
-.main .logo svg {
-  flex-grow: 1;
-  height: auto;
-  max-width: 60em; }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 20%;
+    width: 95%;
+    margin: 1em auto; }
+    @media (min-width: 25em) {
+      .main .logo {
+        width: 80%; } }
+    .main .logo svg {
+      flex-grow: 1;
+      height: auto;
+      max-width: 60em; }
 
 @keyframes spin {
   100% {
@@ -68,9 +61,7 @@ button {
   font-family: Roboto;
   color: #4caf50;
   cursor: pointer; }
-
-button:hover {
-  background: rgba(204, 204, 204, 0.5); }
-
-button span {
-  font-size: 1.4em; }
+  button:hover {
+    background: rgba(204, 204, 204, 0.5); }
+  button span {
+    font-size: 1.4em; }
