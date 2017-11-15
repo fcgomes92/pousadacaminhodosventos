@@ -33,11 +33,15 @@ class App extends Component {
       <Router>
         <div className="app">
           <div className="content">
-            <Route exact={ROUTES.subscribeComponent.exact} path={ROUTES.subscribeComponent.path} component={SubscribeComponent}/>
+            <Route exact={ROUTES.subscribeComponent.exact} path={ROUTES.subscribeComponent.path} component={props=>{
+              return <SubscribeComponent {...props} contactCallback={this.handleOnContactClick}/>;
+            }}/>
             <Route exact={ROUTES.aboutComponent.exact} path={ROUTES.aboutComponent.path} component={(props)=>{
-                return <AboutComponent {...props} contactCallback={this.handleOnContactClick}/>
+                return <AboutComponent {...props} contactCallback={this.handleOnContactClick}/>;
               }}/>
-            <Route exact={ROUTES.photosComponent.exact} path={ROUTES.photosComponent.path} component={PhotosComponent}/>
+            <Route exact={ROUTES.photosComponent.exact} path={ROUTES.photosComponent.path} component={props=>{
+              return <PhotosComponent {...props} contactCallback={this.handleOnContactClick}/>;
+            }}/>
             <Route exact path={'/off'} render={() => {
               return (
                 <div>Parece que você esta offline</div>

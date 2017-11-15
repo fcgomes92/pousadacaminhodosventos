@@ -48,54 +48,9 @@ body {
     overflow: hidden;
     padding: 1.6em;
     width: 90%;
-
-    .main-card-submitted {
-      p {
+    p {
         font-size: 1.6em;
-      }
-    }
-
-    form {
-      .main-card-info {
-        font-size: 1.6em;
-        margin: 0.5em 0;
-      }
-
-      .main-card-inputs {
-        margin: 1.6em 0;
-
-        .main-card-input {
-          margin: 1.6em;
-          input {
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid #CCC;
-            color: #555;
-            box-sizing: border-box;
-            font-size: 1.6em;
-            padding: 1em 0;
-            position: relative;
-            top: 50%;
-            width: 90%;
-
-            @media(min-width: 40em){
-              width: 50%;
-            }
-
-            &:focus {
-              outline: none;
-            }
-          }
-
-          input::-webkit-input-placeholder {
-            color: #AAA;
-          }
-
-          input:focus::-webkit-input-placeholder {
-            color: #4caf50;
-          }
-        }
-      }
+        line-height: 160%;
     }
   }
 

@@ -26,6 +26,9 @@ class ContactDialog extends Component {
               <li className="icon-phone">
                 <a target='_blank' href={strings.contactPhoneLink}>{strings.contactPhone}</a>
               </li>
+              <li className="icon-phone">
+                <a target='_blank' href={strings.contactPhoneLink2}>{strings.contactPhone2}</a>
+              </li>
               <li className="icon-email">
                 <a target='_blank' href={strings.contactEmailLink}>{strings.contactEmail}</a>
               </li>

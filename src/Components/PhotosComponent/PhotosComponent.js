@@ -139,11 +139,12 @@ class PhotosComponent extends Component {
         {this.renderImageGalery()}
         <div style={styles.actions}>
           <Link to={ROUTES.subscribeComponent.path}>
-            <button>{strings.subscribeText}</button>
+            <button>{strings.returnText}</button>
           </Link>
           <Link to={ROUTES.aboutComponent.path}>
             <button>{strings.aboutText}</button>
           </Link>
+          <button onClick={this.props.contactCallback}>{strings.contactButton}</button>
         </div>
       </div>
     )

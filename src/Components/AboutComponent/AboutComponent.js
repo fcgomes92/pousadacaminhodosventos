@@ -56,7 +56,11 @@ class AboutComponent extends Component {
           </div>
 
           <p className="call-text">
-            {strings.callText}
+            {strings.callText} <a href="#" onClick={this.props.contactCallback}>{strings.contactButton}</a>
+          </p>
+
+          <p className="call-text">
+            {strings.callText2}
           </p>
 
           <div style={styles.actions}>
