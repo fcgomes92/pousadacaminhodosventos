@@ -1,0 +1,60 @@
+@import "./colors";
+@import "./util";
+
+.navbar {
+  display: flex;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6.4em;
+  background: $md-green-500;
+  overflow: hidden;
+
+  &--shadow-true {
+    @extend .shadow-2;
+  }
+
+  .navbar__links {
+    flex-basis: 100%;
+    display: none;
+    justify-content: flex-end;
+    align-items: stretch;
+    align-self: center;
+
+    &--show-only-large {
+      @media(min-width: 48em) {
+        display: flex;
+      }
+    }
+
+    .navbar__links__link {
+      color: #FFF;
+      background: $md-green-500;
+      text-decoration: none;
+      transition: background 150ms ease;
+      padding: 0 1.6em;
+      line-height: 6.4em;
+      text-align: center;
+
+      &:hover {
+        color: #FFF;
+        background: $md-green-300;
+      }
+
+      &--selected {
+        background: $md-brown-500;
+        &:hover {
+          background: $md-brown-300;
+        }
+      }
+
+      .navbar__links__link__text {
+        font-size: 1.3em;
+        user-select: none;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,23 @@
+html, body, #root {
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  margin: 6.4em 0 0 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: .8em 0;
+
+  svg {
+    flex-grow: 1;
+    height: auto;
+    max-width: 100em;
+  }
+}

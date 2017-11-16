@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import './Loader.css';
+import '../../assets/scss/Loader.css';
 
 import classNames from 'classnames';
 
