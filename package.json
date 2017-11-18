@@ -23,6 +23,7 @@
     "url": "https://github.com/fcgomes92/pousadacaminhodosventos/issues"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "classnames": "^2.2.5",
     "directus-sdk-javascript": "^2.3.1",
     "history": "^4.7.2",

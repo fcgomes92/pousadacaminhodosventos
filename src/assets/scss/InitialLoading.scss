@@ -1,0 +1,20 @@
+@import "./colors";
+
+.initial-loading {
+  z-index: 1000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $md-green-50;
+  padding: .8em;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.initial-loading .logo {
+  max-width: 100em;
+  width: 100%;
+  margin: auto;
+}

@@ -1,9 +1,11 @@
-import Home from './Components/Home/HomeComponent';
+import HomeComponent from './Components/Home/HomeComponent';
+import MoreInfoComponent from './Components/MoreInfo/MoreInfoComponent';
+import PhotosComponent from './Components/Photos/PhotosComponent';
 import NotFound from './Components/NotFound/NotFoundComponent';
 
 const URLS = {
     base: () => '/',
-    about: () => '/about',
+    moreInfo: () => '/more-info',
     photos: () => '/photos',
 };
 
@@ -11,19 +13,19 @@ const ROUTES = [
     {
         exact: true,
         path: URLS.base(),
-        component: Home,
+        component: HomeComponent,
         name: 'home',
     },
     {
         exact: true,
-        path: URLS.about(),
-        component: Home,
-        name: 'about',
+        path: URLS.moreInfo(),
+        component: MoreInfoComponent,
+        name: 'more-info',
     },
     {
         exact: true,
         path: URLS.photos(),
-        component: Home,
+        component: PhotosComponent,
         name: 'photos',
     },
     {

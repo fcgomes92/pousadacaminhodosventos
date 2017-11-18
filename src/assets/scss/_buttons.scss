@@ -1,0 +1,40 @@
+
+.flat-button {
+  border: none;
+  background: none;
+  vertical-align: middle;
+  transition: all 150ms ease;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  &--white-text {
+    color: #FFF;
+  }
+
+  &:focus {
+    border: .1em solid #FFF;
+  }
+
+  &:hover {
+    border: none;
+    background: rgba(0, 0, 0, .1);
+  }
+
+  &:active {
+    border: none;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  &--round {
+    border-radius: 50%;
+    &:active {
+      background: rgba(0, 0, 0, .2);
+    }
+    &:focus {
+      border-radius: 50%;
+    }
+  }
+}

@@ -6,19 +6,36 @@ i18n.use(LanguageDetector).init({
     resources: {
         'pt-BR': {
             translations: {
+                pageTitle: "Pousada e Hostel Caminho dos Ventos - {{page}}",
                 homePageTitle: "Pousada e Hostel Caminho dos Ventos",
+                moreInfoPageTitle: "Mais Informações",
+                photosPageTitle: "Fotos",
+
                 navbarHome: 'Página Inicial',
                 navbarAbout: 'Mais informações',
                 navbarPhotos: 'Fotos',
 
+                bannerHeaderTitle1: "Pousada e Hostel",
+                bannerHeaderTitle2: "Caminho dos Ventos",
+                bannerHeaderTitle3: "Passa Quatro - MG",
+
+                aboutTitle: 'Venha conhecer a beleza do nosso espaço!',
+                aboutFacilitiesTitle: 'A Pousada e Hostel Caminho dos Ventos conta com:',
+                aboutFacilitiesListItem0: 'Uma ótima piscina;',
+                aboutFacilitiesListItem1: 'Sauna seca e a vapor;',
+                aboutFacilitiesListItem2: 'Garagem para bikes e carros;',
+                aboutFacilitiesListItem3: 'Oficina para as bikes;',
+                aboutFacilitiesListItem4: 'Cozinha aberta 24H para utilização dos hóspedes;',
+                aboutFacilitiesListItem5: 'Área gourmet;',
+                aboutFacilitiesListItem6: 'Banheiros masculino e feminino, externos, e com banho a serpentina de Fogão a Lenha;',
+                aboutFacilitiesListItem7: 'Ampla área verde de frente para a Serra da Mantiqueira!',
+
                 footerContact: "Contato",
                 footerAbout: "Sobre",
                 cardTitle: "Pousada e Hostel Caminho dos Ventos",
-                info: "A Pousada e Hostel Caminho dos Ventos conta com piscina, sauna seca e a vapor, garagem, lavador, oficina  para as bikes, cozinha aberta 24 h para utilização dos hóspedes, área gourmet, banheiros masculino e feminino externo com banho a serpentina de fogão a lenha e uma ampla área verde de frente para a serra da mantiqueira.",
                 readMore: "Mais Informações",
                 photosText: "Fotos",
                 contactButton: "Entre em contato",
-                aboutTitle: "Sobre a Pousada e Hostel Caminho dos Ventos",
                 aboutText: `A Pousada e Hostel Caminho dos Ventos está estruturada para receber os amantes do pedal, bem como os demais segmentos da população que gostam de curtir a natureza e as trilhas da maravilhosa Serra da Mantiqueira.
       Localizada no bairro Pinheirinhos, na cidade de Passa Quatro - MG, apesar de sua estrutura simples, possui uma bela vista do Pico da Gomeira, que compõe parte do complexo da Mantiqueira. Fica bem perto das cidades de Virginia, Itanhandú, Itamonte, Pouso Alto, São Sebastião do Rio Verde e vários distritos da região, onde existe a diversidade e capacidade de um ótimo turismo rural.`,
                 callText: `Já estamos em funcionamento! Entre em contato clicando aqui: `,

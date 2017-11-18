@@ -1,23 +1,21 @@
 html, body, #root {
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
-.main {
-  margin: 6.4em 0 0 0;
-}
+main {
+  height: calc(100% - 6.4em);
+  padding: 6.4em 0 0 0;
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: .8em 0;
-
-  svg {
-    flex-grow: 1;
-    height: auto;
-    max-width: 100em;
+  @media(min-width: 42em) {
+    height: 100%;
+    padding: 0 0 0 25em;
   }
+
 }
+
+@import "buttons";
+@import "images";

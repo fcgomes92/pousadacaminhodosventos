@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import BannerComponent from '../Banner/BannerComponent';
-import AboutComponent from '../About/AboutComponent';
 import NavbarComponent from '../Navbar/NavbarComponent';
 
 import {translate} from 'react-i18next';
 
-class HomeComponent extends Component {
+class PhotosComponent extends Component {
     static propTypes = {
         t: PropTypes.func,
         i18n: PropTypes.object,
@@ -15,7 +13,7 @@ class HomeComponent extends Component {
 
     componentDidMount() {
         const {t} = this.props;
-        document.title = t('homePageTitle');
+        document.title = t('pageTitle', {page: t('photosPageTitle')});
         window.scrollTo(0,0);
     }
 
@@ -23,11 +21,9 @@ class HomeComponent extends Component {
         return (
             <main>
                 <NavbarComponent/>
-                <BannerComponent/>
-                <AboutComponent/>
             </main>
         )
     }
 }
 
-export default translate('translations')(HomeComponent);
+export default translate('translations')(PhotosComponent);

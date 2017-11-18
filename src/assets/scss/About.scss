@@ -1,0 +1,114 @@
+@import "colors";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparentize($md-green-100, .75);
+  position: relative;
+
+  &__scroll-block {
+    z-index: 1;
+    position: absolute;
+    bottom: .8em;
+    left: 50%;
+    transform: translateX(-50%);
+    i {
+      font-size: 3.2em;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+
+    &__svg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      //top: 50%;
+      //left: 50%;
+      opacity: .35;
+
+      #sky {
+        fill: $md-light-blue-100;
+      }
+
+      #mountain {
+        fill: $md-green-100;
+      }
+
+    }
+  }
+
+  &__title {
+    z-index: 1;
+    margin: 3.2em 0;
+    text-align: center;
+
+    &__text {
+      font-weight: 300;
+      font-size: 4.8em;
+    }
+  }
+  &__facilities {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin: .25em 0 .5em 0;
+      font-size: 3.2em;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    &__list {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto 4em auto;
+
+      @media(min-width: 48em) {
+        width: 75%;
+      }
+    }
+
+    &__list-item {
+      display: flex;
+      align-items: center;
+      flex-basis: 100%;
+      flex-grow: 1;
+      min-height: 6.6em;
+      margin: 1.6em;
+
+      @media(min-width: 64em) {
+        flex-basis: 40%;
+      }
+
+      &__text {
+        font-size: 2em;
+        flex-shrink: 1;
+      }
+      &__icon {
+        margin: 0 .8em;
+        min-width: 5em;
+        min-height: 5em;
+        width: 5em;
+        height: 5em;
+        max-width: 5em;
+        max-height: 5em;
+      }
+    }
+  }
+}

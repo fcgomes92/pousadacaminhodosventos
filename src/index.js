@@ -24,4 +24,12 @@ import App from './Components/App/AppComponent';
 
 render(
     <I18nextProvider i18n={i18n}><App/></I18nextProvider>,
-    document.getElementById('root'));
+    document.getElementById('root'),
+    () => {
+        let initialLoading = document.getElementById("initialLoading");
+        initialLoading.style.opacity = 0;
+        setTimeout(() => {
+            initialLoading.style.display = 'none';
+        }, 250);
+
+    });
