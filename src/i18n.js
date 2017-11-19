@@ -19,6 +19,27 @@ i18n.use(LanguageDetector).init({
                 bannerHeaderTitle2: "Caminho dos Ventos",
                 bannerHeaderTitle3: "Passa Quatro - MG",
 
+
+                contactFormTitle: "Entre em contato com a gente",
+                contactFormSubtitle: "Aqui você pode enviar suas dúvidas, sugestões ou até mesmo reservar sua estadia em nosso lindo espaço!",
+
+                yourName: "Seu nome",
+                subject: "Assunto",
+                subjectSelectSuggestion: "Sugestão",
+                subjectSelectQuestion: "Dúvida",
+                subjectSelectReservation: "Reserva",
+                yourEmail: "Seu Email",
+                message: "Mensagem",
+
+                send: "Enviar",
+
+                footerMapBanner: "Voltar ao Topo",
+                footerMapAbout: "Sobre",
+                footerMapContact: "Entrar em Contato",
+                footerMapHome: "Página Inicial",
+                footerMapMoreInfo: "Mais Informações",
+                footerMapPhotos: "Fotos",
+
                 aboutTitle: 'Venha conhecer a beleza do nosso espaço!',
                 aboutFacilitiesTitle: 'A Pousada e Hostel Caminho dos Ventos conta com:',
                 aboutFacilitiesListItem0: 'Uma ótima piscina;',

@@ -1,0 +1,16 @@
+@import "colors";
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+
+  &--brown-500 {
+    color: $md-brown-500;
+    &:hover, &:visited {
+      color: lighten($md-brown-500, 7);
+    }
+    &:active {
+      color: darken($md-brown-500, 7);
+    }
+  }
+}

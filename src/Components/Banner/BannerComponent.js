@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
+import {translate} from 'react-i18next';
+
 import '../../assets/scss/BannerHeader.css';
 import ScrollToTheEndComponent from '../ScrollToTheEnd/ScrollToTheEndComponent';
-import {translate} from 'react-i18next';
 
 class BannerComponent extends Component {
     static propTypes = {
@@ -37,7 +38,7 @@ class BannerComponent extends Component {
         };
 
         return (
-            <section className={cls.bannerHeader} ref={this.handleSectionRef}>
+            <section className={cls.bannerHeader} ref={this.handleSectionRef} id={"banner"}>
                 <div className={cls.bannerHeaderOverlay}/>
                 <div className={cls.bannerHeaderTitle}>
                     <span className={cls.bannerHeaderTitleTextThick}>{t('bannerHeaderTitle1')}</span>

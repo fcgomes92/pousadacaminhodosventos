@@ -40,6 +40,7 @@ $smallNav-height: 6.4em;
 }
 
 .navbar-background {
+  box-sizing: border-box;
   background: rgba(0, 0, 0, .5);
   display: block;
   z-index: -99;
@@ -62,7 +63,7 @@ $smallNav-height: 6.4em;
   }
 
   .menu-btn {
-    margin: 1.6em .8em;
+    margin: .8em;
     position: fixed;
     top: 0;
     right: 0;

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import '../../assets/scss/BannerHeader.css';
-import {translate} from 'react-i18next';
 
 class ScrollToTheEndComponent extends Component {
     static propTypes = {

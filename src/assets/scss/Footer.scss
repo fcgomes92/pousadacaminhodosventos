@@ -1,0 +1,44 @@
+@import "colors";
+
+.footer {
+  background: rgba($md-green-500, .35);
+  display: flex;
+  padding: 3.2em 1.6em;
+  flex-direction: column;
+  justify-content: center;
+
+  &__map {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__item {
+      flex-basis: 100%;
+      margin: 1.6em 0;
+
+      @media(min-width: 32em) {
+        flex-basis: 30%;
+      }
+
+      &__text {
+        font-size: 1.4em;
+      }
+    }
+
+  }
+
+  &__dev {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 3.2em .8em 0 .8em;
+
+    &__copyright {
+      line-height: 160%;
+      font-size: 1.3em;
+      color: $md-brown-900;
+    }
+  }
+}
