@@ -20,6 +20,46 @@ class FooterComponent extends Component {
         navMapItems: [],
     };
 
+    renderNavMapItems(cls) {
+        const {navMapItems} = this.props;
+        if (navMapItems.length === 0) {
+            return null;
+        } else {
+            return (
+                <div className={cls.footerMap}>{navMapItems.map((item, idx) => {
+                    return (
+                        <div className={cls.footerMapItem} key={`__page-map-item-${idx}`}>
+                            <a href={item.ref} className={cls.footerMapItemText}>
+                                {item.text}
+                            </a>
+                        </div>
+                    );
+                })}</div>
+            )
+        }
+    }
+
+    renderPageMapItems(cls) {
+        const {pageMapItems} = this.props;
+        if (pageMapItems.length === 0) {
+            return null;
+        } else {
+            return (
+                <div className={cls.footerMap}>
+                    {pageMapItems.map((item, idx) => {
+                        return (
+                            <div className={cls.footerMapItem} key={`__page-map-item-${idx}`}>
+                                <Link to={item.url} className={cls.footerMapItemText}>
+                                    {item.text}
+                                </Link>
+                            </div>
+                        );
+                    })}
+                </div>
+            )
+        }
+    }
+
     render() {
         const {pageMapItems, navMapItems} = this.props;
         const cls = {
@@ -34,29 +74,9 @@ class FooterComponent extends Component {
 
         return (
             <footer className={cls.footer} id="footer">
-                <div className={cls.footerMap}>
-                    {navMapItems.map((item, idx) => {
-                        return (
-                            <div className={cls.footerMapItem} key={`__page-map-item-${idx}`}>
-                                <a href={item.ref} className={cls.footerMapItemText}>
-                                    {item.text}
-                                </a>
-                            </div>
-                        );
-                    })}
-                </div>
-                <hr className={cls.divider}/>
-                <div className={cls.footerMap}>
-                    {pageMapItems.map((item, idx) => {
-                        return (
-                            <div className={cls.footerMapItem} key={`__page-map-item-${idx}`}>
-                                <Link to={item.url} className={cls.footerMapItemText}>
-                                    {item.text}
-                                </Link>
-                            </div>
-                        );
-                    })}
-                </div>
+                {this.renderNavMapItems(cls)}
+                {this.renderPageMapItems(cls)}
+                {/*{this.renderPageMapItems(cls)}*/}
                 <div className={cls.footerDev}>
                     <div className={cls.footerDevCopyright}>&#169;&nbsp;2017 Pousada Caminho dos Ventos</div>
                 </div>

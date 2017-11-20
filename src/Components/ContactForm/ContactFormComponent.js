@@ -14,6 +14,8 @@ class ContactFormComponent extends Component {
         classNameTitleText: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         classNameSubtitle: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         classNameSubtitleText: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        title: PropTypes.string,
+        subtitle: PropTypes.string,
     };
 
     static defaultProps = {

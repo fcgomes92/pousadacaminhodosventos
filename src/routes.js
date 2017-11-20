@@ -7,6 +7,7 @@ const URLS = {
     base: () => '/',
     moreInfo: () => '/more-info',
     photos: () => '/photos',
+    bookARoom: () => '/book-a-room',
 };
 
 const ROUTES = [
@@ -25,6 +26,12 @@ const ROUTES = [
     {
         exact: true,
         path: URLS.photos(),
+        component: PhotosComponent,
+        name: 'photos',
+    },
+    {
+        exact: true,
+        path: URLS.bookARoom(),
         component: PhotosComponent,
         name: 'photos',
     },

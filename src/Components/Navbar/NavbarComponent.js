@@ -77,6 +77,9 @@ class NavbarComponent extends Component {
                         <NavLink exact className={cls.navLink} activeClassName={cls.navLinkSelected} to={URLS.photos()}>
                             <span className={cls.navLinkText}>{t('navbarPhotos')}</span>
                         </NavLink>
+                        <NavLink exact className={cls.navLink} activeClassName={cls.navLinkSelected} to={URLS.bookARoom()}>
+                            <span className={cls.navLinkText}>{t('navbarBookARoom')}</span>
+                        </NavLink>
                     </div>
                     <div className={cls.navSocial}>
                         <span className={cls.navSocialLink}>FB</span>
