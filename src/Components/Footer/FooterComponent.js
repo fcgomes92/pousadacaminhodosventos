@@ -69,6 +69,7 @@ class FooterComponent extends Component {
             footerMapItem: 'footer__map__item',
             footerMapItemText: 'footer__map__item__text link link--brown-500',
             footerDev: 'footer__dev',
+            footerDevVersion: 'footer__dev__version',
             footerDevCopyright: 'footer__dev__copyright',
             divider: 'divider divider--green-700'
         };
@@ -78,7 +79,7 @@ class FooterComponent extends Component {
                 {this.renderNavMapItems(cls)}
                 {this.renderPageMapItems(cls)}
                 <div className={cls.footerDev}>
-                    <div className={cls.footerDevCopyright}>{`${VERSION}`}</div>
+                    <div className={cls.footerDevVersion}>{`v${VERSION}`}</div>
                     <div className={cls.footerDevCopyright}>&#169;&nbsp;2017 Pousada Caminho dos Ventos</div>
                 </div>
             </footer>

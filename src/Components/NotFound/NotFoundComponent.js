@@ -55,7 +55,7 @@ class NotFoundComponent extends Component {
                             </div>
                         }
                         texts={[
-                            <Link className={cls.ctaLink} to={URLS.base()}>{t('notFoundCta')}</Link>
+                            <Link key={`__not-found-cta`} className={cls.ctaLink} to={URLS.base()}>{t('notFoundCta')}</Link>
                         ]}
                     />
                 </div>

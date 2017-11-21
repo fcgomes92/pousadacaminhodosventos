@@ -36,11 +36,11 @@
     background: $md-green-200;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-basis: 100%;
     padding: .8em .8em 0 .8em;
 
-    &__copyright {
+    &__copyright, &__version {
       line-height: 160%;
       font-size: 1.3em;
       color: $md-brown-900;
