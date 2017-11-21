@@ -1,6 +1,6 @@
 import RemoteInstance from '../assets/js/directus';
 
-export const VERSION = '1.0.2';
+export const VERSION = '1.0.3';
 export const DOMAIN = 'http://localhost:3000';
 export const DEBUG = process.env.NODE_ENV === 'development';
 
