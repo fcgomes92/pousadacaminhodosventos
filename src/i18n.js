@@ -68,6 +68,8 @@ i18n.use(LanguageDetector).init({
                 moreInfoTextMapTitle: 'Um pouco sobre nós',
 
                 bookARoom: 'Faça sua reserva agora mesmo!',
+                bookARoomTitle1: 'Reserve hoje sua estadia na',
+                bookARoomTitle2: 'Pousada e Hostel Caminho dos Ventos',
                 contactsInfoTitle: 'Você pode realizar sua reserva através dos contatos abaixo',
                 bookARoomFormSubtitle: 'Ou faça sua reserva utilizando o formulário abaixo!',
 

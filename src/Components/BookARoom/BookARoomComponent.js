@@ -106,7 +106,7 @@ class MoreInfoComponent extends Component {
         return (
             <main>
                 <NavbarComponent/>
-                <SimpleBannerComponent upperText={t('moreInfoBannerTitle1')} lowerText={t('moreInfoBannerTitle2')}/>
+                <SimpleBannerComponent upperText={t('bookARoomTitle1')} lowerText={t('bookARoomTitle2')}/>
                 {this.renderContactForm()}
                 <FooterComponent
                     pageMapItems={[

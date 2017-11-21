@@ -1,6 +1,6 @@
 import {disableLog} from '../util';
 
-import RemoteInstance from 'directus-sdk-javascript/remote';
+import RemoteInstance from '../assets/js/directus';
 
 export const DEBUG = process.env.NODE_ENV === 'development';
 
