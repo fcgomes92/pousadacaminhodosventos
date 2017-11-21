@@ -4,7 +4,7 @@ import '../../assets/scss/Loader.css';
 
 import classNames from 'classnames';
 
-class Loader extends Component {
+class LoaderComponent extends Component {
   static propTypes = {
     size: PropTypes.string,
     show: PropTypes.bool,
@@ -30,4 +30,4 @@ class Loader extends Component {
   }
 }
 
-export default Loader;
+export default LoaderComponent;

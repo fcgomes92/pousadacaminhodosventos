@@ -61,7 +61,6 @@ class FooterComponent extends Component {
     }
 
     render() {
-        const {pageMapItems, navMapItems} = this.props;
         const cls = {
             footer: 'footer',
             footerMap: 'footer__map',
@@ -76,7 +75,6 @@ class FooterComponent extends Component {
             <footer className={cls.footer} id="footer">
                 {this.renderNavMapItems(cls)}
                 {this.renderPageMapItems(cls)}
-                {/*{this.renderPageMapItems(cls)}*/}
                 <div className={cls.footerDev}>
                     <div className={cls.footerDevCopyright}>&#169;&nbsp;2017 Pousada Caminho dos Ventos</div>
                 </div>

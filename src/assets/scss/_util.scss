@@ -55,3 +55,19 @@
     border-color: $md-green-700;
   }
 }
+
+.social-icon {
+  &:before {
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    padding-right: 0.5em;
+    font-size: 1.6em;
+    vertical-align: middle;
+  }
+}

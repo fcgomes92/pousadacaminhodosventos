@@ -1,6 +1,7 @@
 import HomeComponent from './Components/Home/HomeComponent';
 import MoreInfoComponent from './Components/MoreInfo/MoreInfoComponent';
 import PhotosComponent from './Components/Photos/PhotosComponent';
+import BookARoomComponent from './Components/BookARoom/BookARoomComponent';
 import NotFound from './Components/NotFound/NotFoundComponent';
 
 const URLS = {
@@ -32,7 +33,7 @@ const ROUTES = [
     {
         exact: true,
         path: URLS.bookARoom(),
-        component: PhotosComponent,
+        component: BookARoomComponent,
         name: 'photos',
     },
     {
