@@ -11,6 +11,7 @@ i18n.use(LanguageDetector).init({
                 moreInfoPageTitle: "Mais Informações",
                 photosPageTitle: "Fotos",
                 bookARoomPageTitle: 'Faça sua reserva',
+                contactThanksPageTitle: 'Muito obrigado!',
 
                 navbarHome: 'Página Inicial',
                 navbarAbout: 'Mais informações',
@@ -56,10 +57,10 @@ i18n.use(LanguageDetector).init({
 
                 aboutTitle: 'Venha conhecer a beleza do nosso espaço!',
                 aboutFacilitiesTitle: 'A Pousada e Hostel Caminho dos Ventos conta com:',
-                aboutFacilitiesListItem0: 'Uma ótima piscina;',
+                aboutFacilitiesListItem0: 'Piscina;',
                 aboutFacilitiesListItem1: 'Sauna seca e a vapor;',
-                aboutFacilitiesListItem2: 'Garagem para bikes e carros;',
-                aboutFacilitiesListItem3: 'Oficina para as bikes;',
+                aboutFacilitiesListItem2: 'Garagem para bikes;',
+                aboutFacilitiesListItem3: 'Lavador para as bikes;',
                 aboutFacilitiesListItem4: 'Cozinha aberta 24H para utilização dos hóspedes;',
                 aboutFacilitiesListItem5: 'Área gourmet;',
                 aboutFacilitiesListItem6: 'Banheiros masculino e feminino, externos, e com banho a serpentina de Fogão a Lenha;',
@@ -82,6 +83,13 @@ i18n.use(LanguageDetector).init({
                 contactAddressPt1: "Rua Clementino José de Siqueira, 2029, Pinheirinhos",
                 contactAddressPt2: "Passa Quatro / MG",
                 contactAddressLink: "https://goo.gl/maps/WqnJ8Uxacxw",
+
+                contactThanksTitle: 'Obrigado!',
+                contactThanksSubtitle: 'Nós iremos responder o mais rápido possível no email informado no formulário.',
+
+                notFoundTitle: '404! Página não encontrada!',
+                notFoundSubtitle: 'A página não foi encontrada.',
+                notFoundCta: 'Clique aqui para voltar a página inicial',
             }
         },
     },

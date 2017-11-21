@@ -3,12 +3,14 @@ import MoreInfoComponent from './Components/MoreInfo/MoreInfoComponent';
 import PhotosComponent from './Components/Photos/PhotosComponent';
 import BookARoomComponent from './Components/BookARoom/BookARoomComponent';
 import NotFound from './Components/NotFound/NotFoundComponent';
+import ContactThanksComponent from "./Components/ContactThanks/ContactThanksComponent";
 
 const URLS = {
     base: () => '/',
     moreInfo: () => '/more-info',
     photos: () => '/photos',
     bookARoom: () => '/book-a-room',
+    contactThanks: () => '/contact-thanks',
 };
 
 const ROUTES = [
@@ -35,6 +37,12 @@ const ROUTES = [
         path: URLS.bookARoom(),
         component: BookARoomComponent,
         name: 'photos',
+    },
+    {
+        exact: false,
+        path: URLS.contactThanks(),
+        component: ContactThanksComponent,
+        name: 'contact-thanks',
     },
     {
         exact: false,

@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom';
 
 import {translate} from 'react-i18next';
 
+
 import '../../assets/scss/Footer.css';
+import {VERSION} from "../../settings/settings";
 
 class FooterComponent extends Component {
     static propTypes = {
@@ -76,6 +78,7 @@ class FooterComponent extends Component {
                 {this.renderNavMapItems(cls)}
                 {this.renderPageMapItems(cls)}
                 <div className={cls.footerDev}>
+                    <div className={cls.footerDevCopyright}>{`${VERSION}`}</div>
                     <div className={cls.footerDevCopyright}>&#169;&nbsp;2017 Pousada Caminho dos Ventos</div>
                 </div>
             </footer>

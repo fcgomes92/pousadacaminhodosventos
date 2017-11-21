@@ -5,7 +5,7 @@ class MapsIFrameComponent extends Component {
     static propTypes = {
         className: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         title: PropTypes.string,
-        id: PropTypes.oneOfType(PropTypes.number, PropTypes.string),
+        id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     };
 
     static defaultProps = {

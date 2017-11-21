@@ -2,6 +2,8 @@ import {disableLog} from '../util';
 
 import RemoteInstance from '../assets/js/directus';
 
+export const VERSION = '1.0.2';
+export const DOMAIN = 'https://pousadacaminhodosventos.com';
 export const DEBUG = process.env.NODE_ENV === 'development';
 
 const DIRECTUS_TOKEN = "AM9Omvb1egkzDCajMpE9CINnhAO3xMS4";

@@ -5,6 +5,9 @@ import classNames from 'classnames';
 
 import {translate} from 'react-i18next';
 
+import {DOMAIN} from "../../settings/settings";
+import {URLS} from "../../routes";
+
 class ContactFormComponent extends Component {
     static propTypes = {
         t: PropTypes.func,
@@ -61,7 +64,7 @@ class ContactFormComponent extends Component {
                 </div>
                 <input type="hidden"
                        name="_next"
-                       value="//site.io/thanks.html"/>
+                       value={`${DOMAIN}${URLS.contactThanks()}`}/>
                 <input type="hidden"
                        name="_language"
                        value="pt"/>
@@ -76,14 +79,14 @@ class ContactFormComponent extends Component {
                        name="name"
                        required
                        placeholder={t('yourName')}/>
-                <select type="text"
-                        name="_subject"
+                <select name="_subject"
                         required
+                        defaultValue={""}
                         className={cls.inputField}>
-                    <option value="" disabled selected>{t('subject')}</option>
+                    <option value="" disabled>{t('subject')}</option>
                     <option value={t('subjectSelectQuestion')}>{t('subjectSelectQuestion')}</option>
-                    <option value={t('subjectSuggestion')}>{t('subjectSelectSuggestion')}</option>
-                    <option value={t('subjectReservation')}>{t('subjectSelectReservation')}</option>
+                    <option value={t('subjectSelectSuggestion')}>{t('subjectSelectSuggestion')}</option>
+                    <option value={t('subjectSelectReservation')}>{t('subjectSelectReservation')}</option>
                 </select>
                 <input type="email"
                        className={cls.inputField}
