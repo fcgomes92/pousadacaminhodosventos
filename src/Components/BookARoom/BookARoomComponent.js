@@ -33,6 +33,7 @@ class MoreInfoComponent extends Component {
             bookARoomContactsInfo: 'book-a-room__contacts-info',
             bookARoomContactsInfoList: 'book-a-room__contacts-info__list',
             bookARoomContactsInfoListItem: (icon) => `book-a-room__contacts-info__list__item ${icon}`,
+            bookARoomContactsInfoListItemButton: `book-a-room__contacts-info__list__item book-a-room__contacts-info__list__item--button`,
             bookARoomFormTitle: 'book-a-room__title',
             bookARoomFormTitleText: 'book-a-room__title__text',
             bookARoomFormSubtitle: 'book-a-room__subtitle',
@@ -42,6 +43,7 @@ class MoreInfoComponent extends Component {
             textAreaField: 'flat-text-area flat-text-area--full-width',
             submitButton: 'flat-button flat-button--full-width flat-button--green-500',
             link: 'link link--green-500',
+            linkButton: 'link link--button--green-500'
         };
 
         return (
@@ -83,6 +85,13 @@ class MoreInfoComponent extends Component {
                                    className={cls.link}
                                    href={t("contactAddressLink")}>
                                     {t("contactAddressPt1")} {t("contactAddressPt2")}
+                                </a>
+                            </li>
+                            <li className={cls.bookARoomContactsInfoListItemButton}>
+                                <a target='_blank'
+                                   className={cls.linkButton}
+                                   href={t("contactAddressLink")}>
+                                    {t("howToGetThere")}
                                 </a>
                             </li>
                         </ul>

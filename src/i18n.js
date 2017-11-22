@@ -90,6 +90,8 @@ i18n.use(LanguageDetector).init({
                 notFoundTitle: '404! Página não encontrada!',
                 notFoundSubtitle: 'A página não foi encontrada.',
                 notFoundCta: 'Clique aqui para voltar a página inicial',
+
+                howToGetThere: 'Como chegar',
             }
         },
     },
