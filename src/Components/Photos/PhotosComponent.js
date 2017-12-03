@@ -8,8 +8,10 @@ import {translate} from 'react-i18next';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
+import 'whatwg-fetch';
+
 import '../../assets/scss/Photos.css';
-import {directusClient, DIRECTUS_URL} from '../../settings/settings';
+import {CMS_URL} from '../../settings/settings';
 import NavbarComponent from '../Navbar/NavbarComponent';
 import SimpleBannerComponent from '../SimpleBanner/SimpleBannerComponent';
 import FooterComponent from "../Footer/FooterComponent";
@@ -35,14 +37,17 @@ class PhotosComponent extends Component {
         this.handleLoadGalleryImages();
     }
 
-    handleLoadGalleryImages = () => {
-        directusClient.getItems('image_gallery', {"filters[active][eq]": 1}).then((response) => {
-            this.setState({
-                images: response.data,
-                loadingImages: false,
-            });
-        }).catch(err => {
-            console.error(err);
+    handleLoadGalleryImages = async () => {
+        let response = await fetch(CMS_URL, {
+            method: 'GET',
+
+        });
+
+        let response_data = await response.json();
+
+        this.setState({
+            images: response_data,
+            loadingImages: false,
         });
     };
 
@@ -58,9 +63,17 @@ class PhotosComponent extends Component {
         };
 
         const images = this.state.images.map(image => {
+            let src = image.source_url;
+            let thumb;
+            try {
+                thumb = image.media_details.sizes.thumbnail.source_url ? image.media_details.sizes.thumbnail.source_url : src;
+            } catch (e) {
+                thumb = src;
+            }
+
             return {
-                original: `${DIRECTUS_URL}${image.image.data.url}`,
-                thumbnail: `${DIRECTUS_URL}${image.image.data.thumbnail_url}`,
+                original: src,
+                thumbnail: thumb,
             }
         });
 

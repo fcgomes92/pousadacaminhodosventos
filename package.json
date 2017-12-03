@@ -25,7 +25,6 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "classnames": "^2.2.5",
-    "directus-sdk-javascript": "^2.3.1",
     "history": "^4.7.2",
     "i18next": "^10.0.7",
     "i18next-browser-languagedetector": "^2.1.0",
@@ -35,7 +34,6 @@
     "react-i18next": "^6.1.0",
     "react-image-gallery": "^0.8.6",
     "react-router-dom": "^4.2.2",
-    "react-toolbox": "^2.0.0-beta.12",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
