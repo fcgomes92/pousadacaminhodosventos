@@ -30,7 +30,7 @@ class AboutComponent extends Component {
         const {t} = this.props;
 
         let facilitiesListItems = [];
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 9; i++) {
             facilitiesListItems.push(
                 <li className={listItemCls} key={`__fli_key_${i}`}>
                     <BikeIcon className={listItemIconCls}/>

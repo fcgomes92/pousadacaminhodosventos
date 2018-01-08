@@ -38,6 +38,8 @@ class MoreInfoComponent extends Component {
             bookARoomFormTitleText: 'book-a-room__title__text',
             bookARoomFormSubtitle: 'book-a-room__subtitle',
             bookARoomFormSubtitleText: 'book-a-room__subtitle__text',
+            bookARoomCardReminder: 'book-a-room__card-reminder',
+            bookARoomCardReminderText: 'book-a-room__card-reminder__text',
             bookARoomForm: 'book-a-room__form',
             inputField: 'flat-input flat-input--full-width',
             textAreaField: 'flat-text-area flat-text-area--full-width',
@@ -50,6 +52,11 @@ class MoreInfoComponent extends Component {
             <div className={cls.bookARoom}>
                 <div className={cls.bookARoomBg}>
                     <Mountain1Icon className={cls.bookARoomBgSvg}/>
+                </div>
+                <div className={cls.bookARoomCardReminder}>
+                            <span className={cls.bookARoomCardReminderText}>
+                                {t('bookARoomCardReminder')}
+                            </span>
                 </div>
                 <div className={cls.bookARoomBlock}>
                     <div className={cls.bookARoomContactsInfo}>

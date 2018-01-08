@@ -72,6 +72,17 @@
     }
   }
 
+  &__card-reminder {
+    flex-basis: 100%;
+    align-self: center;
+    text-align: center;
+    margin: .8em auto;
+    &__text {
+      font-weight: 300;
+      font-size: 2em;
+    }
+  }
+
   &__background {
     position: absolute;
     top: 0;
