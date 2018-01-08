@@ -82,8 +82,8 @@ class NavbarComponent extends Component {
                         </NavLink>
                     </div>
                     <div className={cls.navSocial}>
-                        <span className={cls.navSocialLink}>FB</span>
-                        <span className={cls.navSocialLink}>EMAIL</span>
+                        {/*<span className={cls.navSocialLink}>FB</span>*/}
+                        {/*<span className={cls.navSocialLink}>EMAIL</span>*/}
                     </div>
                 </div>
             </nav>
