@@ -65,7 +65,7 @@ i18n.use(LanguageDetector).init({
                 aboutFacilitiesListItem5: 'Área gourmet;',
                 aboutFacilitiesListItem6: 'Banheiros masculino e feminino, externos, e com banho a serpentina de Fogão a Lenha;',
                 aboutFacilitiesListItem7: 'Ampla área verde de frente para a Serra da Mantiqueira!',
-                aboutFacilitiesListItem8: 'Aceitamos todos os tipos de cartões!',
+                aboutFacilitiesListItem8: 'Aceitamos todos os tipos de cartões de débito!',
 
                 moreInfoTextMapTitle: 'Um pouco sobre nós',
 
@@ -74,7 +74,7 @@ i18n.use(LanguageDetector).init({
                 bookARoomTitle2: 'Pousada e Hostel Caminho dos Ventos',
                 contactsInfoTitle: 'Você pode realizar sua reserva através dos contatos abaixo',
                 bookARoomFormSubtitle: 'Ou faça sua reserva utilizando o formulário abaixo!',
-                bookARoomCardReminder: "Aceitamos todos os tipos de cartões!",
+                bookARoomCardReminder: "Aceitamos todos os tipos de cartões de débito!",
 
                 contactPhone: '+55 (35) 9 9700-9631​⁠​',
                 contactPhoneLink: 'tel:5535997009631​⁠​',
