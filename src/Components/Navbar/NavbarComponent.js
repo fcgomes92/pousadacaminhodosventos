@@ -10,6 +10,7 @@ import classNames from 'classnames';
 import {URLS} from '../../routes';
 import Logo from '../../assets/imgs/logo.jpeg';
 import '../../assets/scss/Navbar.css';
+import DevelopersDialogComponent from '../SimpleDialog/DevelopersDialogComponent';
 
 class NavbarComponent extends Component {
     static propTypes = {
@@ -19,6 +20,7 @@ class NavbarComponent extends Component {
 
     state = {
         leftNavOpen: false,
+        developersDialogOpen: false,
     };
 
     handleToggleLeftNav = () => {
@@ -26,9 +28,14 @@ class NavbarComponent extends Component {
         this.setState({leftNavOpen: !leftNavOpen})
     };
 
+    handleToggleDevelopersDialog = () => {
+        const {developersDialogOpen} = this.state;
+        this.setState({developersDialogOpen: !developersDialogOpen})
+    };
+
     render() {
         const {t} = this.props;
-        const {leftNavOpen} = this.state;
+        const {leftNavOpen, developersDialogOpen} = this.state;
 
         const cls = {
             smallNav: 'small-navbar navbar--shadow',
@@ -82,10 +89,13 @@ class NavbarComponent extends Component {
                         </NavLink>
                     </div>
                     <div className={cls.navSocial}>
-                        {/*<span className={cls.navSocialLink}>FB</span>*/}
-                        {/*<span className={cls.navSocialLink}>EMAIL</span>*/}
+                        <span onClick={this.handleToggleDevelopersDialog} className={cls.navSocialLink}>FB</span>
                     </div>
                 </div>
+                <DevelopersDialogComponent
+                    open={developersDialogOpen}
+                    onCloseRequest={this.handleToggleDevelopersDialog}
+                />
             </nav>
         )
     }
