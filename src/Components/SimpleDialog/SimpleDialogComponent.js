@@ -62,10 +62,10 @@ class SimpleDialogComponent extends React.Component {
 
         return (
             <div className={cls.simpleDialog}
-                 ref={this.handleContainerRef}
-                 onClick={this.handleOnRequestClose}>
-                <div className={cls.simpleDialogContent}
-                     onClick={this.handleOnRequestClose}>
+                 ref={this.handleContainerRef}>
+                <div className={cls.simpleDialogOverlay}
+                     onClick={this.handleOnRequestClose}/>
+                <div className={cls.simpleDialogContent}>
                     {this.renderContent()}
                 </div>
             </div>

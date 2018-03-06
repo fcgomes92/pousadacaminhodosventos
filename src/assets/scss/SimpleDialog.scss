@@ -20,7 +20,17 @@ $transition-timing: ease-in;
 
   &__content {
     transform: translate(0, -200%);
+    z-index: -99;
     transition: all $transition-time $transition-timing;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
   }
 
   &.show {
@@ -28,14 +38,17 @@ $transition-timing: ease-in;
     z-index: 100;
 
     .simple-dialog {
+      &__overlay {
+        z-index: 100;
+      }
+
       &__content {
+        z-index: 101;
         opacity: 1;
         transform: translate(0, 0);
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 20em;
-        min-width: 20em;
       }
     }
   }

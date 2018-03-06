@@ -26,7 +26,7 @@ class CardTitleComponent extends React.Component {
                     <span className={cls.cardTitlePrimaryTextText}>{primaryText}</span>
                 </div>
                 <div className={cls.cardTitleSecondaryText}>
-                    <span className={cls.cardTitleSecondaryTextText}>{primaryText}</span>
+                    <span className={cls.cardTitleSecondaryTextText}>{secondaryText}</span>
                 </div>
             </div>
         )
@@ -36,21 +36,30 @@ class CardTitleComponent extends React.Component {
 class CardActionsComponent extends React.Component {
     render() {
         const {children} = this.props;
-        return (<div>{children}</div>)
+        const cls = {
+            actions: 'card__actions',
+        };
+        return (<div className={cls.actions}>{children}</div>)
     }
 }
 
 class CardMediaComponent extends React.Component {
     render() {
-        const {children} = this.props;
-        return (<div>{children}</div>)
+        const {srcImg} = this.props;
+        const cls = {
+            cardMedia: 'card__media',
+        };
+        return (<div className={cls.cardMedia} style={{backgroundImage: `url(${srcImg})`}}/>)
     }
 }
 
 class CardContentComponent extends React.Component {
     render() {
         const {children} = this.props;
-        return (<div>{children}</div>)
+        const cls = {
+            cardContent: 'card__content',
+        };
+        return (<div className={cls.cardContent}>{children}</div>)
     }
 }
 

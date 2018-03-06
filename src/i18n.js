@@ -6,7 +6,10 @@ i18n.use(LanguageDetector).init({
     resources: {
         'pt-BR': {
             translations: {
+                close: 'Fechar',
                 developedBy: 'Desenvolvido por Fernando Gomes',
+                developersDialogPrimaryTitle: 'Fernando Coelho Gomes',
+                developersDialogSecondaryTitle: 'Desenvolvedor Full-Stack',
 
                 pageTitle: "Pousada e Hostel Caminho dos Ventos - {{page}}",
                 homePageTitle: "Pousada e Hostel Caminho dos Ventos",

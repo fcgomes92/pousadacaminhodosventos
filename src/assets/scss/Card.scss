@@ -1,19 +1,29 @@
 .card {
   background: #FFF;
   min-height: 10em;
-  min-width: 20em;
+  min-width: 25em;
+  margin: auto;
   max-height: 100%;
   max-width: 100%;
   border-radius: .2em;
-  padding: .8em;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+  &__media {
+    background-size: cover;
+    background-position: center;
+    min-height: 20em;
+    padding: .4em 1.6em;
+  }
+
+  &__content {
+    padding: .4em 1.6em;
+  }
+
   &__title {
     &__container {
-      padding-bottom: .8em;
+      padding: 1.6em 1.6em .4em 1.6em;
     }
     &__primary-text {
       &__text {
@@ -26,6 +36,17 @@
         font-size: 1.4em;
         font-weight: 300;
       }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: .4em 1.6em 1.6em 1.6em;
+
+    &__action {
+      justify-content: flex-end;
+      margin: .4em .8em 0 .4em;
     }
   }
 }
