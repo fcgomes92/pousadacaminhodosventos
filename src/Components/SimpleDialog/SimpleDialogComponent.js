@@ -15,12 +15,37 @@ class SimpleDialogComponent extends React.Component {
         open: false,
     };
 
+    containerRef = null;
+    handleContainerOnKeyDownListener = (event) => {
+        if (event.keyCode === 27) {
+            this.handleOnRequestClose();
+        }
+    };
+    handleToggleKeyListener = (open) => {
+        if (open) {
+            document.addEventListener('keydown', this.handleContainerOnKeyDownListener);
+        } else {
+            document.removeEventListener('keydown', this.handleContainerOnKeyDownListener);
+        }
+    };
+    handleContainerRef = (container) => {
+        if (container) {
+            this.containerRef = container;
+        }
+    };
+
     handleOnRequestClose = () => {
         const {onRequestClose} = this.props;
         if (onRequestClose) {
             onRequestClose();
         }
     };
+
+    componentWillReceiveProps(newProps) {
+        const {open} = this.props;
+        if (open !== newProps.open)
+            this.handleToggleKeyListener(newProps.open);
+    }
 
     renderContent() {
         return null;
@@ -37,6 +62,7 @@ class SimpleDialogComponent extends React.Component {
 
         return (
             <div className={cls.simpleDialog}
+                 ref={this.handleContainerRef}
                  onClick={this.handleOnRequestClose}>
                 <div className={cls.simpleDialogContent}
                      onClick={this.handleOnRequestClose}>

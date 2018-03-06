@@ -152,7 +152,14 @@ $smallNav-height: 6.4em;
     align-items: center;
 
     .navbar__social-links__link {
+      color: $md-grey-800;
       margin: 0 .8em;
+      cursor: pointer;
+      transition: all ease 250ms;
+
+      &:hover {
+        color: $md-grey-900;
+      }
     }
   }
 }

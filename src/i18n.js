@@ -6,6 +6,8 @@ i18n.use(LanguageDetector).init({
     resources: {
         'pt-BR': {
             translations: {
+                developedBy: 'Desenvolvido por Fernando Gomes',
+
                 pageTitle: "Pousada e Hostel Caminho dos Ventos - {{page}}",
                 homePageTitle: "Pousada e Hostel Caminho dos Ventos",
                 moreInfoPageTitle: "Mais Informações",

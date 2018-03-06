@@ -1,0 +1,31 @@
+.card {
+  background: #FFF;
+  min-height: 10em;
+  min-width: 20em;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: .2em;
+  padding: .8em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    &__container {
+      padding-bottom: .8em;
+    }
+    &__primary-text {
+      &__text {
+        font-size: 1.8em;
+        font-weight: 500;
+      }
+    }
+    &__secondary-text {
+      &__text {
+        font-size: 1.4em;
+        font-weight: 300;
+      }
+    }
+  }
+}

@@ -89,12 +89,14 @@ class NavbarComponent extends Component {
                         </NavLink>
                     </div>
                     <div className={cls.navSocial}>
-                        <span onClick={this.handleToggleDevelopersDialog} className={cls.navSocialLink}>FB</span>
+                        <span onClick={this.handleToggleDevelopersDialog} className={cls.navSocialLink}>
+                            {t('developedBy')}
+                        </span>
                     </div>
                 </div>
                 <DevelopersDialogComponent
                     open={developersDialogOpen}
-                    onCloseRequest={this.handleToggleDevelopersDialog}
+                    onRequestClose={this.handleToggleDevelopersDialog}
                 />
             </nav>
         )
