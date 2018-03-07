@@ -1,6 +1,6 @@
 import {disableLog} from '../util';
 
-export const VERSION = '1.0.7';
+export const VERSION = '1.1.0';
 export const DOMAIN = 'https://pousadacaminhodosventos.com';
 export const DEBUG = process.env.NODE_ENV === 'development';
 
