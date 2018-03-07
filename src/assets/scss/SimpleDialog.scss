@@ -21,6 +21,8 @@ $transition-timing: ease-in;
   &__content {
     transform: translate(0, -200%);
     z-index: -99;
+    max-height: 100%;
+    margin: .8em;
     transition: all $transition-time $transition-timing;
   }
 

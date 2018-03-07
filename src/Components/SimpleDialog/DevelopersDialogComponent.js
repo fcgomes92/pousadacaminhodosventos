@@ -5,14 +5,8 @@ import PropTypes from 'prop-types';
 import {translate} from "react-i18next";
 
 import SimpleDialogComponent from './SimpleDialogComponent';
-import {
-    CardActionsComponent,
-    CardComponent,
-    CardContentComponent,
-    CardMediaComponent,
-    CardTitleComponent
-} from "../Card/CardComponent";
-import Logo from '../../assets/imgs/logo.jpeg';
+import {CardActionsComponent, CardComponent, CardContentComponent, CardTitleComponent} from "../Card/CardComponent";
+import {ListComponent, ListItemComponent} from "../List/ListComponent";
 
 class DevelopersDialogComponent extends SimpleDialogComponent {
     static propTypes = {
@@ -31,13 +25,22 @@ class DevelopersDialogComponent extends SimpleDialogComponent {
             <CardComponent>
                 <CardTitleComponent primaryText={t('developersDialogPrimaryTitle')}
                                     secondaryText={t('developersDialogSecondaryTitle')}/>
-                <CardMediaComponent srcImg={Logo}/>
+                {/*<CardMediaComponent srcImg={Logo}/>*/}
                 <CardContentComponent>
-                    <ul>
-                        <li><a href="htpps://github.com/fcgomes92" target="_blank" rel="noopener">GITHUB</a></li>
-                        <li><a href="htpps://linkedin.com/fcgomes92" target="_blank" rel="noopener">SITE</a></li>
-                        <li><a href="https://fcgomes.com" target="_blank" rel="noopener">SITE</a></li>
-                    </ul>
+                    <ListComponent>
+                        <ListItemComponent href={t('gitHubUrl')}
+                                           target="_blank"
+                                           leftIcon={<i className={'ion-social-github icon--3x'}/>}
+                                           primaryText={t('gitHub')}/>
+                        <ListItemComponent href={t('blogUrl')}
+                                           target="_blank"
+                                           leftIcon={<i className={'ion-ios-world-outline icon--3x'}/>}
+                                           primaryText={t('blog')}/>
+                        <ListItemComponent href={t('linkedInUrl')}
+                                           target="_blank"
+                                           leftIcon={<i className={'ion-social-linkedin icon--3x'}/>}
+                                           primaryText={t('linkedIn')}/>
+                    </ListComponent>
                 </CardContentComponent>
                 <CardActionsComponent>
                     <button className={cls.actionButton}

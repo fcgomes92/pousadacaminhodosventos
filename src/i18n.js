@@ -6,6 +6,13 @@ i18n.use(LanguageDetector).init({
     resources: {
         'pt-BR': {
             translations: {
+                gitHub: 'GitHub',
+                gitHubUrl: 'https://github.com/fcgomes92',
+                blog: 'Site Pessoal',
+                blogUrl: 'https://fcgomes.com',
+                linkedIn: 'LinkedIn',
+                linkedInUrl: 'https://linkedin.com/in/fcgomes92',
+
                 close: 'Fechar',
                 developedBy: 'Desenvolvido por Fernando Gomes',
                 developersDialogPrimaryTitle: 'Fernando Coelho Gomes',
