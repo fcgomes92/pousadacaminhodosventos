@@ -77,9 +77,8 @@ i18n.use(LanguageDetector).init({
         aboutFacilitiesListItem5: 'Área gourmet;',
         aboutFacilitiesListItem6: 'Banheiros masculino e feminino, externos, e com banho a serpentina de Fogão a Lenha;',
         aboutFacilitiesListItem7: 'Transporte próprio para quem vai fazer a travessia da Serra Fina;',
-        aboutFacilitiesListItem8: 'Busca no sítio do Pierre em Itamonte;',
-        aboutFacilitiesListItem9: 'Ampla área verde de frente para a Serra da Mantiqueira!',
-        aboutFacilitiesListItem10: 'Aceitamos todos os tipos de cartões de débito!',
+        aboutFacilitiesListItem8: 'Ampla área verde de frente para a Serra da Mantiqueira!',
+        aboutFacilitiesListItem9: 'Aceitamos todos os tipos de cartões de débito!',
 
         moreInfoTextMapTitle: 'Um pouco sobre nós',
 

@@ -14,6 +14,8 @@ class AboutComponent extends Component {
     i18n: PropTypes.object,
   };
 
+  FACILITIES_AMOUNT = 9;
+
   state = {
     section: null,
   };
@@ -29,7 +31,7 @@ class AboutComponent extends Component {
     const { t } = this.props;
 
     let facilitiesListItems = [];
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < this.FACILITIES_AMOUNT + 1; i++) {
       facilitiesListItems.push(
         <li className={listItemCls} key={`__fli_key_${i}`}>
           <BikeIcon className={listItemIconCls} />
