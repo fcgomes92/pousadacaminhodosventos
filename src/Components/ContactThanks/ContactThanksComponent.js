@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { translate } from 'react-i18next';
 
 import '../../assets/scss/ContactThanks.css';
-import NavbarComponent from '../Navbar/NavbarComponent';
 import SimplePageMessageComponent from '../SimplePageMessage/SimplePageMessageComponent';
 import BikeMountainIcon from '../svg/BikeMountainIcon';
 
@@ -36,8 +35,7 @@ class ContactThanksComponent extends Component {
     };
 
     return (
-      <main>
-        <NavbarComponent />
+      <Fragment>
         <div className={cls.pageMessage}>
           <BikeMountainIcon className={cls.pageMessageBg} />
           <SimplePageMessageComponent
@@ -54,7 +52,7 @@ class ContactThanksComponent extends Component {
             }
           />
         </div>
-      </main>
+      </Fragment>
     )
   }
 }

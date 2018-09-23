@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { translate } from 'react-i18next';
-
-import NavbarComponent from '../Navbar/NavbarComponent';
 import SimpleBannerComponent from '../SimpleBanner/SimpleBannerComponent';
 import FooterComponent from '../Footer/FooterComponent';
 import ContactFormComponent from '../ContactForm/ContactFormComponent';
@@ -134,8 +132,7 @@ class MoreInfoComponent extends Component {
     const { t } = this.props;
 
     return (
-      <main>
-        <NavbarComponent />
+      <Fragment>
         <SimpleBannerComponent upperText={t('bookARoomTitle1')} lowerText={t('bookARoomTitle2')} />
         {this.renderContactForm()}
         <FooterComponent
@@ -145,7 +142,7 @@ class MoreInfoComponent extends Component {
             { text: t('footerMapPhotos'), url: URLS.photos() },
           ]}
         />
-      </main>
+      </Fragment>
     )
   }
 }

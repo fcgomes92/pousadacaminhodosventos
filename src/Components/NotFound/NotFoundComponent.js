@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { translate } from 'react-i18next';
 
 import '../../assets/scss/NotFound.css';
-import NavbarComponent from '../Navbar/NavbarComponent';
 import SimplePageMessageComponent from '../SimplePageMessage/SimplePageMessageComponent';
 import BikeMountainIcon from '../svg/BikeMountainIcon';
 import { URLS } from '../../routes';
@@ -40,8 +39,7 @@ class NotFoundComponent extends Component {
     };
 
     return (
-      <main>
-        <NavbarComponent />
+      <Fragment>
         <div className={cls.pageMessage}>
           <BikeMountainIcon className={cls.pageMessageBg} />
           <SimplePageMessageComponent
@@ -61,7 +59,7 @@ class NotFoundComponent extends Component {
             ]}
           />
         </div>
-      </main>
+      </Fragment>
     )
   }
 }

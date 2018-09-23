@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
-
-import NavbarComponent from '../Navbar/NavbarComponent';
 import SimpleBannerComponent from '../SimpleBanner/SimpleBannerComponent';
 import MapsIFrameComponent from '../MapsIFrame/MapsIFrameComponent';
 import FooterComponent from '../Footer/FooterComponent';
@@ -74,8 +72,7 @@ class MoreInfoComponent extends Component {
     const { t } = this.props;
 
     return (
-      <main>
-        <NavbarComponent />
+      <Fragment>
         <SimpleBannerComponent upperText={t('moreInfoBannerTitle1')} lowerText={t('moreInfoBannerTitle2')} />
         {this.renderTextMapSection()}
         <FooterComponent
@@ -85,7 +82,7 @@ class MoreInfoComponent extends Component {
             { text: t('footerMapBookARoom'), url: URLS.bookARoom() },
           ]}
         />
-      </main>
+      </Fragment>
     )
   }
 }

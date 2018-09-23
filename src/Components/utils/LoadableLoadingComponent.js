@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../../assets/scss/Loader.css';
+import '../../assets/scss/Loading.css';
 
 import classNames from 'classnames';
 
-class LoaderComponent extends Component {
+class LoadingComponent extends Component {
   static propTypes = {
     size: PropTypes.string,
     show: PropTypes.bool,
@@ -20,6 +20,7 @@ class LoaderComponent extends Component {
 
   render() {
     const cls = classNames('loader', this.props.className);
+    if (!this.props.pastDelay) return null;
     return (<div
       className={cls} style={{
       display: this.props.show
@@ -28,8 +29,8 @@ class LoaderComponent extends Component {
       width: this.props.size,
       height: this.props.size,
     }}
-    />)
+    />);
   }
 }
 
-export default LoaderComponent;
+export default LoadingComponent;

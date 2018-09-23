@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
@@ -12,10 +12,9 @@ import 'whatwg-fetch';
 
 import '../../assets/scss/Photos.css';
 import { CMS_URL } from '../../settings/constants';
-import NavbarComponent from '../Navbar/NavbarComponent';
 import SimpleBannerComponent from '../SimpleBanner/SimpleBannerComponent';
 import FooterComponent from '../Footer/FooterComponent';
-import LoaderComponent from '../Loader/LoaderComponent';
+import LoadingComponent from '../utils/LoadingComponent';
 import { URLS } from '../../routes';
 
 class PhotosComponent extends Component {
@@ -79,7 +78,7 @@ class PhotosComponent extends Component {
       }
     });
 
-    let gallery = <LoaderComponent size={'2em'} />;
+    let gallery = <LoadingComponent size={'2em'} />;
 
     if (!this.state.loadingImages) {
       gallery = <ImageGallery
@@ -110,8 +109,7 @@ class PhotosComponent extends Component {
   render() {
     const { t } = this.props;
     return (
-      <main>
-        <NavbarComponent />
+      <Fragment>
         <SimpleBannerComponent upperText={t('photosBannerTitle1')} lowerText={t('photosBannerTitle2')} />
         {this.renderGallery()}
         <FooterComponent
@@ -121,7 +119,7 @@ class PhotosComponent extends Component {
             { text: t('footerMapBookARoom'), url: URLS.bookARoom() },
           ]}
         />
-      </main>
+      </Fragment>
     )
   }
 }

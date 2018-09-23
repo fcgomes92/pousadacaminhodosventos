@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import BannerComponent from '../Banner/BannerComponent';
 import AboutComponent from '../About/AboutComponent';
-import NavbarComponent from '../Navbar/NavbarComponent';
 import FooterComponent from '../Footer/FooterComponent';
 import Mountain1Icon from '../svg/Mountain1Icon';
 import ContactFormComponent from '../ContactForm/ContactFormComponent';
@@ -65,8 +64,7 @@ class HomeComponent extends Component {
     const { t } = this.props;
 
     return (
-      <main>
-        <NavbarComponent />
+      <Fragment>
         <BannerComponent />
         <AboutComponent />
         {this.renderContact()}
@@ -81,7 +79,7 @@ class HomeComponent extends Component {
             { text: t('footerMapBookARoom'), url: URLS.bookARoom() },
           ]}
         />
-      </main>
+      </Fragment>
     )
   }
 }

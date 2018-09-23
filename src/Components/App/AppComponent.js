@@ -9,6 +9,7 @@ import { translate } from 'react-i18next';
 import { ROUTES } from '../../routes';
 import { DEBUG } from '../../settings/settings';
 import '../../assets/scss/App.css';
+import NavbarComponent from '../Navbar/NavbarComponent';
 
 const customHistory = createBrowserHistory();
 
@@ -43,18 +44,21 @@ class AppComponent extends Component {
   render() {
     return (
       <Router history={customHistory}>
-        <Switch>
-          {
-            ROUTES.map(route => {
-              return <Route
-                exact={route.exact}
-                path={route.path}
-                component={route.component}
-                key={`__key_${route.name}`}
-              />
-            })
-          }
-        </Switch>
+        <main>
+          <NavbarComponent />
+          <Switch>
+            {
+              ROUTES.map(route => {
+                return <Route
+                  exact={route.exact}
+                  path={route.path}
+                  component={route.component}
+                  key={`__key_${route.name}`}
+                />
+              })
+            }
+          </Switch>
+        </main>
       </Router>
     )
   }
