@@ -29,6 +29,8 @@ i18n.use(LanguageDetector).init({
         navbarAbout: 'Mais informações',
         navbarPhotos: 'Fotos',
         navbarBookARoom: 'Faça sua reserva',
+        navbarTour: 'Faça um tour!',
+        navbarTourLink: 'https://www.google.com/maps/uv?hl=pt-BR&pb=!1s0x9dff359ff1b049%3A0x9a5a4522023284!2m20!8m2!1m1!1e2!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e6!2m2!1m1!1e4!2m2!1m1!1e5!3m1!7e115!4s%2Fmaps%2Fplace%2Fpousada%2Bcaminho%2Bdos%2Bventos%2F%40-22.4156972%2C-44.979818%2C3a%2C75y%2C295.6h%2C90t%2Fdata%3D*213m4*211e1*213m2*211skqPwE7Zxy9PBAWnMzxrfUQ*212e0*214m2*213m1*211s0x9dff359ff1b049%3A0x9a5a4522023284!5spousada%20caminho%20dos%20ventos%20-%20Pesquisa%20Google&imagekey=!1e10!2sAF1QipMyd73cfTkrt1EoARj5edKL-8KOulazuJ5U0m9D&sa=X&ved=2ahUKEwjtlNGuvNHdAhWKkJAKHdWqANAQpx8wD3oECAsQDg&activetab=panorama',
 
         bannerHeaderTitle1: 'Pousada e Hostel',
         bannerHeaderTitle2: 'Caminho dos Ventos',
@@ -107,6 +109,8 @@ i18n.use(LanguageDetector).init({
         notFoundCta: 'Clique aqui para voltar a página inicial',
 
         howToGetThere: 'Como chegar',
+
+        ctaBarText: 'Faça um tour em nosso espaço. Clique aqui!',
       },
     },
   },

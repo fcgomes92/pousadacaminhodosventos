@@ -1,0 +1,56 @@
+@import "colors.scss";
+@import "Navbar.scss";
+
+.cta-bar {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  min-height: 6.4rem;
+  z-index: -97;
+  background-color: $md-green-400;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  opacity: 0;
+  box-sizing: border-box;
+  transition: all 250ms ease-in-out;
+  color: $md-white;
+
+  &--show {
+    bottom: 0;
+    z-index: 97;
+    opacity: 1;
+  }
+
+  &__close {
+    text-align: center;
+    display: flex;
+    padding: .8rem 1.6rem;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 2.4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  &__text {
+    cursor: pointer;
+    display: flex;
+    padding: .8rem 1.6rem;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.6rem;
+    font-weight: 300;
+    flex-grow: 1;
+  }
+}
+
+@media(min-width: 42em) {
+  .cta-bar {
+    &--show {
+      bottom: -100%;
+      z-index: -97;
+      opacity: 0;
+    }
+  }
+}

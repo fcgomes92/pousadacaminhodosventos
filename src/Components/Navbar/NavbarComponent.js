@@ -11,6 +11,7 @@ import { URLS } from '../../routes';
 import Logo from '../../assets/imgs/logo.jpeg';
 import '../../assets/scss/Navbar.css';
 import DevelopersDialogComponent from '../SimpleDialog/DevelopersDialogComponent';
+import CTABarComponent from '../CTABar/CTABarComponent';
 
 class NavbarComponent extends Component {
   static propTypes = {
@@ -91,6 +92,9 @@ class NavbarComponent extends Component {
             <NavLink exact className={cls.navLink} activeClassName={cls.navLinkSelected} to={URLS.bookARoom()}>
               <span className={cls.navLinkText}>{t('navbarBookARoom')}</span>
             </NavLink>
+            <a className={cls.navLink} href={t('navbarTourLink')} target="_blank" rel="noreferrer nofollow">
+              <span className={cls.navLinkText}>{t('navbarTour')}</span>
+            </a>
           </div>
           <div className={cls.navSocial}>
             <span onClick={this.handleToggleDevelopersDialog} className={cls.navSocialLink}>
@@ -102,6 +106,7 @@ class NavbarComponent extends Component {
           open={developersDialogOpen}
           onRequestClose={this.handleToggleDevelopersDialog}
         />
+        <CTABarComponent/>
       </nav>
     )
   }
