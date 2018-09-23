@@ -80,7 +80,7 @@ class FooterComponent extends Component {
         {this.renderPageMapItems(cls)}
         <div className={cls.footerDev}>
           <div className={cls.footerDevVersion}>{`v${VERSION}`}</div>
-          <div className={cls.footerDevCopyright}>&#169;&nbsp;2017 Pousada Caminho dos Ventos</div>
+          <div className={cls.footerDevCopyright}>&#169;&nbsp;2018 Pousada Caminho dos Ventos</div>
         </div>
       </footer>
     )
