@@ -8,14 +8,16 @@ const checkIframeLoaded = (iframeID, callback) => {
       callback();
       return;
     }
-  } catch (e) {}
+  } catch (e) {
+  }
 
   window.setTimeout(() => (checkIframeLoaded(iframeID, callback)), 250);
 }
 
 const disableLog = () => {
   if (process.env.NODE_ENV !== 'development')
-    console.log = () => {};
+    console.log = () => {
+    };
 }
 
-export {checkIframeLoaded, disableLog}
+export { checkIframeLoaded, disableLog }

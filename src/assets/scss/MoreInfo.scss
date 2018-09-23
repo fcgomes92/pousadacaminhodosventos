@@ -9,12 +9,12 @@
     flex-basis: 100%;
     flex-grow: 1;
 
-    @media(min-width: 48em){
+    @media(min-width: 48em) {
       flex-basis: 50%;
     }
   }
 
-  &__map-block{
+  &__map-block {
     min-height: 30em;
   }
 

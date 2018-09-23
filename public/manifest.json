@@ -2,8 +2,9 @@
   "short_name": "PCV",
   "name": "Pousada Caminho dos Ventos",
   "theme_color": "#E8F5E9",
-  "background_color":"#E8F5E9",
-  "icons": [{
+  "background_color": "#E8F5E9",
+  "icons": [
+    {
       "src": "\/icons\/android-icon-36x36.png",
       "sizes": "36x36",
       "type": "image\/png",

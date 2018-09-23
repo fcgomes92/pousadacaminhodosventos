@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../../assets/scss/Loader.css';
 
@@ -8,25 +8,27 @@ class LoaderComponent extends Component {
   static propTypes = {
     size: PropTypes.string,
     show: PropTypes.bool,
-    className: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   };
 
   static defaultProps = {
     width: '2em',
     height: '2em',
-    classNames: "",
+    classNames: '',
     show: true,
   };
 
   render() {
-    const cls = classNames("loader", this.props.className);
-    return (<div className={cls} style={{
+    const cls = classNames('loader', this.props.className);
+    return (<div
+      className={cls} style={{
       display: this.props.show
         ? 'block'
         : 'none',
       width: this.props.size,
-      height: this.props.size
-    }}/>)
+      height: this.props.size,
+    }}
+    />)
   }
 }
 
